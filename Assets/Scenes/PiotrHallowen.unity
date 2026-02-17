@@ -395,6 +395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HallowenPrefab3
       objectReference: {fileID: 0}
+    - target: {fileID: 565586158973985840, guid: 931550d51cbc3424382126e6e6974e8e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2292018308116445025, guid: 931550d51cbc3424382126e6e6974e8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -501,6 +505,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d99e40f81d4fc7a47a39e7646c299c57, type: 3}
+--- !u!1001 &1492342433588613608
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4127632437499156677, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127632437499156677, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127632437499156677, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127632437499156677, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127632437499156677, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127632437499156677, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127632437499156677, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127632437499156677, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127632437499156677, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127632437499156677, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186475000522049452, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
+      propertyPath: m_Name
+      value: HallowenPrefab5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186475000522049452, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cf96cdb57e43b474b9b17a20bc419935, type: 3}
 --- !u!1001 &2002780034455396122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -566,6 +631,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f43e65594fff96e4886fc07ab348cf42, type: 3}
+--- !u!1001 &8213393543929834677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3687545644525778901, guid: 33be09ddd32bdbc40ab18ba99a523f88, type: 3}
+      propertyPath: m_Name
+      value: HallowenPrefab4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973280201082578671, guid: 33be09ddd32bdbc40ab18ba99a523f88, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973280201082578671, guid: 33be09ddd32bdbc40ab18ba99a523f88, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973280201082578671, guid: 33be09ddd32bdbc40ab18ba99a523f88, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973280201082578671, guid: 33be09ddd32bdbc40ab18ba99a523f88, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973280201082578671, guid: 33be09ddd32bdbc40ab18ba99a523f88, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973280201082578671, guid: 33be09ddd32bdbc40ab18ba99a523f88, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973280201082578671, guid: 33be09ddd32bdbc40ab18ba99a523f88, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973280201082578671, guid: 33be09ddd32bdbc40ab18ba99a523f88, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973280201082578671, guid: 33be09ddd32bdbc40ab18ba99a523f88, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973280201082578671, guid: 33be09ddd32bdbc40ab18ba99a523f88, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33be09ddd32bdbc40ab18ba99a523f88, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -575,3 +697,5 @@ SceneRoots:
   - {fileID: 2002780034455396122}
   - {fileID: 1264161021811969205}
   - {fileID: 251771331814254151}
+  - {fileID: 8213393543929834677}
+  - {fileID: 1492342433588613608}
