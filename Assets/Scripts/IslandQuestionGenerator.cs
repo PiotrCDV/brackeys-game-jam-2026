@@ -1,7 +1,6 @@
-    using System;
     using System.Collections.Generic;
+    using IslandQuestions;
     using UnityEngine;
-    using UnityEngine.InputSystem;
     using Random = UnityEngine.Random;
 
     public class IslandQuestionGenerator : MonoBehaviour, IQuestionSelector
@@ -34,10 +33,10 @@
         //
         // }
 
-        private Question PrepareLevel()
+        private IslandQuestions.Question PrepareLevel()
         {
             int questionIndex = Random.Range(0, objectQuestionList.Count);
-            Question question = null;
+            IslandQuestions.Question question = null;
             
             foreach (ObjectQuestionListElement obj in objectQuestionList)
             {
@@ -61,7 +60,7 @@
             
         }
 
-        public Question GetRandomQuestion()
+        public IslandQuestions.Question GetRandomQuestion()
         {
             return PrepareLevel();
         }

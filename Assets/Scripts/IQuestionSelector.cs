@@ -1,4 +1,4 @@
 ﻿public interface IQuestionSelector
 {
-    public Question GetRandomQuestion();
+    public IslandQuestions.Question GetRandomQuestion();
 }
