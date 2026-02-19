@@ -4655,6 +4655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3746057570960424135}
+  - component: {fileID: 9070988497281473915}
   m_Layer: 0
   m_Name: Space2
   m_TagString: Untagged
@@ -4694,6 +4695,67 @@ Transform:
   - {fileID: 5037307090453426473}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9070988497281473915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805443322141318964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 1
+  objectQuestionList:
+  - GroupName: Prezenty
+    objects:
+    - gameObject: {fileID: 8507314983180973319}
+      tag: 
+    - gameObject: {fileID: 6686721352568940054}
+      tag: 
+    - gameObject: {fileID: 2167193095457474455}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many christmas gifts were on the scene?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 3
+    isNumericAnswer: 1
+    minimumAnswer: 1
+    maximumAnswer: 10
+  - GroupName: Balwany
+    objects:
+    - gameObject: {fileID: 7978686862404581335}
+      tag: Basketball
+    - gameObject: {fileID: 3761283002878731275}
+      tag: Beach ball
+    - gameObject: {fileID: 3904284479719695207}
+      tag: Snow
+    wrongAnswers:
+    - gowno
+    - 21d
+    - AWD
+    - dWF
+    - WE
+    - DAWDQ2
+    - Q2D
+    question:
+      question: What was the snowman head made of?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
 --- !u!1 &5878900415077942015
 GameObject:
   m_ObjectHideFlags: 0
@@ -10141,6 +10203,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0e96199b478f8204e9418797ea261900, type: 3}
   m_PrefabInstance: {fileID: 1356150228945812166}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2167193095457474455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e96199b478f8204e9418797ea261900, type: 3}
+  m_PrefabInstance: {fileID: 1356150228945812166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1403624069692867193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14551,6 +14618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffin_decorated
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f123b11da3ba08a4db4c314f5c08b6af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17680,6 +17751,11 @@ PrefabInstance:
 --- !u!4 &6307239639360240812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0effe466d89910a46970e47463f1f611, type: 3}
+  m_PrefabInstance: {fileID: 5768381552000572231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6686721352568940054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0effe466d89910a46970e47463f1f611, type: 3}
   m_PrefabInstance: {fileID: 5768381552000572231}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5937638898710885255
@@ -23490,6 +23566,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98fcb616711d586458a3d64a5a65c1e2, type: 3}
+--- !u!1 &8507314983180973319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 98fcb616711d586458a3d64a5a65c1e2, type: 3}
+  m_PrefabInstance: {fileID: 8849964928683018326}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9033056795411378109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 98fcb616711d586458a3d64a5a65c1e2, type: 3}
