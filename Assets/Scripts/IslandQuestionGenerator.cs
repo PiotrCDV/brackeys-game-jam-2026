@@ -40,8 +40,11 @@
             
             foreach (ObjectQuestionListElement obj in objectQuestionList)
             {
-                obj.DisableAllObjects();
-                obj.EnableObjectsBasedOnMinimumAndMaximum();
+                if (!obj.skipRandomizing)
+                {
+                    obj.DisableAllObjects();
+                    obj.EnableObjectsBasedOnMinimumAndMaximum();
+                }
 
                 if (obj == objectQuestionList[questionIndex])
                 {
@@ -79,8 +82,6 @@
 
         private void OnDebug()
         {
-            Debug.Log("dupa");
-            
             if (debug)
             {
                 var question = GetRandomQuestion();
