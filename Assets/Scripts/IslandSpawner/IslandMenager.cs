@@ -11,7 +11,7 @@ public class IslandMenager : MonoBehaviour
     private IslandDestroyer islandDestroyer;
     [SerializeField]
     private List<GameObject> islandList;
-    private List<GameObject> spawnedIslands;
+    public List<GameObject> spawnedIslands;
     [SerializeField]
     private List<Transform> spawnPoits;
 

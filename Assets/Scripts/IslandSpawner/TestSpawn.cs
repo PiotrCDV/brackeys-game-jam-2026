@@ -9,15 +9,8 @@ public class TestSpawn : MonoBehaviour
     void Start()
     {
         islandMenager.RoundStart();
-        End();
     }
-    private async Task End()
-    {
-        await Task.Delay(5000);
-        islandMenager.RoundEnd();
-        await Task.Delay(5000);
-        islandMenager.RoundStart();
-    }
+
 
     // Update is called once per frame
     void Update()
