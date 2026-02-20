@@ -314,7 +314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3199375258481474522
 Transform:
   m_ObjectHideFlags: 0
@@ -672,7 +672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7167915380307195333
 Transform:
   m_ObjectHideFlags: 0
@@ -1217,6 +1217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4345147529493090060}
+  - component: {fileID: 4102094741228687047}
   m_Layer: 0
   m_Name: DungeonPrefab4
   m_TagString: Untagged
@@ -1246,6 +1247,114 @@ Transform:
   - {fileID: 5508837727207069704}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4102094741228687047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8602082697871516428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 1
+  objectQuestionList:
+  - GroupName: Books in Pentagram
+    objects:
+    - gameObject: {fileID: 1582263901796943214}
+      tag: Blue
+    - gameObject: {fileID: 5197365128165556136}
+      tag: Red
+    - gameObject: {fileID: 3571873328490474376}
+      tag: Green
+    wrongAnswers:
+    - White
+    - Black
+    - Orange
+    - Brown
+    - Yellow
+    - Gold
+    question:
+      question: What color are the books in the pentagram?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
+  - GroupName: Prison
+    objects:
+    - gameObject: {fileID: 3768726011278808157}
+      tag: Man
+    - gameObject: {fileID: 8986813412170782507}
+      tag: Woman
+    wrongAnswers:
+    - Witch
+    - Skieleton
+    - Zombie
+    - Snowman
+    - Werewolf
+    - Vampire
+    question:
+      question: Who was in prison?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
+  - GroupName: Cats
+    objects:
+    - gameObject: {fileID: 5074624790360193533}
+      tag: 
+    - gameObject: {fileID: 3050783468307618469}
+      tag: 
+    - gameObject: {fileID: 6851541820069191049}
+      tag: 
+    - gameObject: {fileID: 973541676261722916}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many cats are there in the alchemy workshop?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 4
+    isNumericAnswer: 1
+    minimumAnswer: 1
+    maximumAnswer: 6
+  - GroupName: Pentagram object
+    objects:
+    - gameObject: {fileID: 5009290507599208120}
+      tag: Grail
+    wrongAnswers:
+    - Key
+    - Sword
+    - Coin
+    - Candle
+    - Skull
+    - Gem
+    question:
+      question: What's inside the pentagram?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
 --- !u!1001 &91161810426885749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4384,6 +4493,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fa9f997b5eec5f4697b683d5226406a, type: 3}
+--- !u!1 &3768726011278808157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2fa9f997b5eec5f4697b683d5226406a, type: 3}
+  m_PrefabInstance: {fileID: 4074734597567506700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4541569038466944743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2fa9f997b5eec5f4697b683d5226406a, type: 3}
@@ -6709,7 +6823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c6070e409f141a846ae498d44ff80c98, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6719,6 +6833,11 @@ PrefabInstance:
 --- !u!4 &8645859617745112465 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c6070e409f141a846ae498d44ff80c98, type: 3}
+  m_PrefabInstance: {fileID: 8103940551602793082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8986813412170782507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c6070e409f141a846ae498d44ff80c98, type: 3}
   m_PrefabInstance: {fileID: 8103940551602793082}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8367780766835504983

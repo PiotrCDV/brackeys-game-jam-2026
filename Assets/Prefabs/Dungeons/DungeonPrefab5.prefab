@@ -28,10 +28,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.009422212, y: -0.10524806, z: 0.9934712, w: 0.043000642}
   m_LocalPosition: {x: -1.583, y: 1.447, z: 1.1763453}
-  m_LocalScale: {x: 1.2386, y: 1.2386001, z: 1.2386001}
+  m_LocalScale: {x: 1.2386, y: 1.2386003, z: 1.2386003}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1479394547620763736}
+  m_Father: {fileID: 5109191337017097721}
   m_LocalEulerAnglesHint: {x: 12.118, y: 360.567, z: -184.897}
 --- !u!33 &3229382325943530141
 MeshFilter:
@@ -513,7 +513,7 @@ Transform:
   m_LocalScale: {x: 1.2386001, y: 1.2386, z: 1.2386}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1479394547620763736}
+  m_Father: {fileID: 5109191337017097721}
   m_LocalEulerAnglesHint: {x: -42.875, y: 314.327, z: -247.14801}
 --- !u!33 &6473563427570267881
 MeshFilter:
@@ -778,6 +778,41 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7151635232354345534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5109191337017097721}
+  m_Layer: 0
+  m_Name: HeatedSword
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5109191337017097721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151635232354345534}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1162168320089662920}
+  - {fileID: 5981600809384121305}
+  - {fileID: 9135579763339364653}
+  - {fileID: 6219161305302220392}
+  m_Father: {fileID: 4076547123290123906}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7562220576726046169
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,16 +847,12 @@ Transform:
   - {fileID: 5793574017062774973}
   - {fileID: 596892236145137992}
   - {fileID: 4935234879021572664}
-  - {fileID: 1162168320089662920}
   - {fileID: 293270436671821251}
   - {fileID: 3868314966889596252}
   - {fileID: 4091905534136548227}
   - {fileID: 3346236882209626483}
   - {fileID: 4865795603106638577}
-  - {fileID: 5981600809384121305}
-  - {fileID: 9135579763339364653}
   - {fileID: 3236640835611381037}
-  - {fileID: 6219161305302220392}
   m_Father: {fileID: 4076547123290123906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7720053579055144255
@@ -833,6 +864,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4076547123290123906}
+  - component: {fileID: 7904584469714774343}
   m_Layer: 0
   m_Name: DungeonPrefab5
   m_TagString: Untagged
@@ -858,8 +890,67 @@ Transform:
   - {fileID: 7605422744223965705}
   - {fileID: 1479394547620763736}
   - {fileID: 745524214790589425}
+  - {fileID: 5109191337017097721}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7904584469714774343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7720053579055144255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 1
+  objectQuestionList:
+  - GroupName: Heated sword
+    objects:
+    - gameObject: {fileID: 1975683043198271346}
+      tag: 
+    - gameObject: {fileID: 5445612473030588223}
+      tag: 
+    - gameObject: {fileID: 70927703483579606}
+      tag: 
+    - gameObject: {fileID: 6702824012647818450}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many heated swords are there?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 4
+    isNumericAnswer: 1
+    minimumAnswer: 1
+    maximumAnswer: 7
+  - GroupName: Arrows in target
+    objects:
+    - gameObject: {fileID: 720533439572209207}
+      tag: 
+    - gameObject: {fileID: 6449515117980134549}
+      tag: 
+    - gameObject: {fileID: 3760966879170459752}
+      tag: 
+    - gameObject: {fileID: 26601534741168530}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many arrows are stuck in the target?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 4
+    isNumericAnswer: 1
+    minimumAnswer: 1
+    maximumAnswer: 6
 --- !u!1 &7752590317935770361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,6 +1258,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
   m_PrefabInstance: {fileID: 377933522921378662}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &720533439572209207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
+  m_PrefabInstance: {fileID: 377933522921378662}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &714017189631818048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1286,6 +1382,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
+--- !u!1 &26601534741168530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
+  m_PrefabInstance: {fileID: 909700897791507651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &798633951320742696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
@@ -1787,7 +1888,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1479394547620763736}
+    m_TransformParent: {fileID: 5109191337017097721}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1a1ff906ee4ac5e4cb580256bc6e90f6, type: 3}
       propertyPath: m_LocalScale.x
@@ -1857,6 +1958,11 @@ PrefabInstance:
 --- !u!4 &1162168320089662920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1a1ff906ee4ac5e4cb580256bc6e90f6, type: 3}
+  m_PrefabInstance: {fileID: 1705281595513324067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1975683043198271346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1a1ff906ee4ac5e4cb580256bc6e90f6, type: 3}
   m_PrefabInstance: {fileID: 1705281595513324067}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1763800481708513998
@@ -2584,6 +2690,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
+--- !u!1 &3760966879170459752 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
+  m_PrefabInstance: {fileID: 4103002061308413241}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4574095775952708306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
@@ -3295,7 +3406,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1479394547620763736}
+    m_TransformParent: {fileID: 5109191337017097721}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7945019f45d08644c8e8ee1a6673da37, type: 3}
       propertyPath: m_LocalScale.x
@@ -3303,11 +3414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7945019f45d08644c8e8ee1a6673da37, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4243001
+      value: 1.4243002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7945019f45d08644c8e8ee1a6673da37, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4243
+      value: 1.4242998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7945019f45d08644c8e8ee1a6673da37, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3365,6 +3476,11 @@ PrefabInstance:
 --- !u!4 &6219161305302220392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7945019f45d08644c8e8ee1a6673da37, type: 3}
+  m_PrefabInstance: {fileID: 5891938927263734147}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6702824012647818450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7945019f45d08644c8e8ee1a6673da37, type: 3}
   m_PrefabInstance: {fileID: 5891938927263734147}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6089886789968849001
@@ -3559,6 +3675,11 @@ PrefabInstance:
 --- !u!4 &5965747201111488047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
+  m_PrefabInstance: {fileID: 6142960494110740932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6449515117980134549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
   m_PrefabInstance: {fileID: 6142960494110740932}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6335528532236095318

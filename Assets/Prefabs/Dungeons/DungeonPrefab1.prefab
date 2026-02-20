@@ -3664,6 +3664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5314701041671962551}
+  - component: {fileID: 2059120756344960872}
   m_Layer: 0
   m_Name: DungeonPrefab1
   m_TagString: Untagged
@@ -3694,6 +3695,70 @@ Transform:
   - {fileID: 895791662345398190}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059120756344960872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6519423773781016724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 1
+  objectQuestionList:
+  - GroupName: ChestWithGold
+    objects:
+    - gameObject: {fileID: 1627118814234038036}
+      tag: Yes
+    - gameObject: {fileID: 8419868072719170841}
+      tag: No
+    wrongAnswers: []
+    question:
+      question: Were there any open chests of gold in the treasury?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
+  - GroupName: Flask
+    objects:
+    - gameObject: {fileID: 3319954264126942065}
+      tag: 
+    - gameObject: {fileID: 1814228079436730201}
+      tag: 
+    - gameObject: {fileID: 1210503445533908336}
+      tag: 
+    - gameObject: {fileID: 1741551613213501560}
+      tag: 
+    - gameObject: {fileID: 141034667488496600}
+      tag: 
+    - gameObject: {fileID: 6370418029161551465}
+      tag: 
+    - gameObject: {fileID: 7424692460852606799}
+      tag: 
+    - gameObject: {fileID: 2019733372195694990}
+      tag: 
+    - gameObject: {fileID: 5375895549996413195}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many bottles are there in the vault?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 9
+    isNumericAnswer: 1
+    minimumAnswer: 3
+    maximumAnswer: 13
 --- !u!1 &6992051222128991312
 GameObject:
   m_ObjectHideFlags: 0
@@ -4611,7 +4676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6723138648948727164
 Transform:
   m_ObjectHideFlags: 0
