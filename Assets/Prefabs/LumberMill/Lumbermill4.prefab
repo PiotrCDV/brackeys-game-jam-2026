@@ -3459,6 +3459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5566570438340681439}
+  - component: {fileID: 8652105631631350576}
   m_Layer: 0
   m_Name: Lumbermill4
   m_TagString: Untagged
@@ -3489,6 +3490,77 @@ Transform:
   - {fileID: 5020489712592069024}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8652105631631350576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920390488652639372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 0
+  objectQuestionList:
+  - GroupName: Tree
+    objects:
+    - gameObject: {fileID: 6409835551542947217}
+      tag: Rocks
+    - gameObject: {fileID: 6581249234855823825}
+      tag: Pumpkins
+    wrongAnswers:
+    - Apples
+    - Vines
+    - Grapes
+    - Presents
+    - Moss
+    - Flowers
+    - Oranges
+    - Human heads
+    - Gingerbread
+    - Money
+    question:
+      question: 'What was growing on the bare tree? '
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
+  - GroupName: Deer
+    objects:
+    - gameObject: {fileID: 1422059777414605907}
+      tag: Cat
+    - gameObject: {fileID: 8802677574313536821}
+      tag: Tiger
+    - gameObject: {fileID: 5054936618143891721}
+      tag: Dog
+    wrongAnswers:
+    - Fox
+    - Hunter
+    - Bear
+    - Lion
+    - pack of wolves
+    - Gingerbread man
+    - Santa Claus
+    question:
+      question: What was chasing the deer?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
 --- !u!1 &4960188737877199834
 GameObject:
   m_ObjectHideFlags: 0
