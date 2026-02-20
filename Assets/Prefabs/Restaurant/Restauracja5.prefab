@@ -5925,6 +5925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5472840068247194966}
+  - component: {fileID: 1892263572253914580}
   m_Layer: 0
   m_Name: Restauracja5
   m_TagString: Untagged
@@ -5953,6 +5954,70 @@ Transform:
   - {fileID: 1185110352125209215}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1892263572253914580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5837422020614689183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 1
+  objectQuestionList:
+  - GroupName: Items
+    objects:
+    - gameObject: {fileID: 7568421870251241866}
+      tag: Knifes
+    - gameObject: {fileID: 3118996091269938391}
+      tag: Sauces
+    - gameObject: {fileID: 8818291564911071778}
+      tag: Cheeses
+    wrongAnswers:
+    - Skulls
+    - Bones
+    - Jars
+    - Bootles
+    - Burgers
+    - Coins
+    question:
+      question: What was on the tables?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
+  - GroupName: Characters
+    objects:
+    - gameObject: {fileID: 2965182847971404978}
+      tag: A wizzard hat
+    - gameObject: {fileID: 604903599219613090}
+      tag: A Viking helmet
+    - gameObject: {fileID: 3404523494594604417}
+      tag: Nothing
+    wrongAnswers:
+    - A basic hat
+    - A winter hat
+    - A hood
+    - A mask
+    question:
+      question: What was the character wearing on their head?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
 --- !u!1 &5876095350386786833
 GameObject:
   m_ObjectHideFlags: 0

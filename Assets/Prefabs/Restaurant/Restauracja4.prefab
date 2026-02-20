@@ -1159,6 +1159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5472840068247194966}
+  - component: {fileID: 3754967578369503993}
   m_Layer: 0
   m_Name: Restauracja4
   m_TagString: Untagged
@@ -1185,6 +1186,70 @@ Transform:
   - {fileID: 4452355782979304192}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3754967578369503993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5837422020614689183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 1
+  objectQuestionList:
+  - GroupName: Jar
+    objects:
+    - gameObject: {fileID: 1027756167651268301}
+      tag: 
+    - gameObject: {fileID: 1208118530060123791}
+      tag: 
+    - gameObject: {fileID: 6276273906600002876}
+      tag: 
+    - gameObject: {fileID: 6188590408666713539}
+      tag: 
+    - gameObject: {fileID: 5835950020693584239}
+      tag: 
+    - gameObject: {fileID: 6663486864682888725}
+      tag: 
+    - gameObject: {fileID: 1040228636633282440}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many jars were there?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 7
+    isNumericAnswer: 1
+    minimumAnswer: 2
+    maximumAnswer: 11
+  - GroupName: Lettuce
+    objects:
+    - gameObject: {fileID: 8591118519736646946}
+      tag: 
+    - gameObject: {fileID: 8835107496092116870}
+      tag: 
+    - gameObject: {fileID: 8221346919420982711}
+      tag: 
+    - gameObject: {fileID: 4702159479967350321}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How much lettuce was there?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 4
+    isNumericAnswer: 1
+    minimumAnswer: 2
+    maximumAnswer: 6
 --- !u!1 &6188590408666713539
 GameObject:
   m_ObjectHideFlags: 0

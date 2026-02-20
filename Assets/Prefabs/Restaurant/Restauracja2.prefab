@@ -2178,6 +2178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2721899944367150045}
+  - component: {fileID: 4283193279748362318}
   m_Layer: 0
   m_Name: Restauracja2
   m_TagString: Untagged
@@ -2204,6 +2205,66 @@ Transform:
   - {fileID: 5925716575716334578}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4283193279748362318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7937461302300369142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 1
+  objectQuestionList:
+  - GroupName: Done burgers
+    objects:
+    - gameObject: {fileID: 8168630516089078305}
+      tag: 
+    - gameObject: {fileID: 614682030658059556}
+      tag: 
+    - gameObject: {fileID: 2472496166172919558}
+      tag: 
+    - gameObject: {fileID: 4370555508158339664}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many fully prepared burgers were there?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 4
+    isNumericAnswer: 1
+    minimumAnswer: 2
+    maximumAnswer: 6
+  - GroupName: Empyy burgers
+    objects:
+    - gameObject: {fileID: 3689355654779929892}
+      tag: 
+    - gameObject: {fileID: 6179711082480557296}
+      tag: 
+    - gameObject: {fileID: 6005596944707427636}
+      tag: 
+    - gameObject: {fileID: 517614470979328978}
+      tag: 
+    - gameObject: {fileID: 1038805738276148042}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many plain buns were there?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 5
+    isNumericAnswer: 1
+    minimumAnswer: 2
+    maximumAnswer: 7
 --- !u!1 &8113111297372956192
 GameObject:
   m_ObjectHideFlags: 0

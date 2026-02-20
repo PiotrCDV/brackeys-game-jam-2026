@@ -1903,6 +1903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4329017117150978138}
+  - component: {fileID: 2193455803341959596}
   m_Layer: 0
   m_Name: Restauracja3
   m_TagString: Untagged
@@ -1929,6 +1930,72 @@ Transform:
   - {fileID: 9202731552145341709}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2193455803341959596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8095333710334089398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 1
+  objectQuestionList:
+  - GroupName: Fride
+    objects:
+    - gameObject: {fileID: 7464160449637387261}
+      tag: Skull
+    - gameObject: {fileID: 3252395870010735969}
+      tag: Carrot
+    - gameObject: {fileID: 7807388675626235083}
+      tag: Bone
+    wrongAnswers:
+    - Ham
+    - Burger
+    - Banana
+    - Pot
+    - Cheese
+    - Animal
+    - Bootle
+    - Cup
+    question:
+      question: What was inside the fridge?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
+  - GroupName: Oven
+    objects:
+    - gameObject: {fileID: 4086645139047478954}
+      tag: Pot
+    - gameObject: {fileID: 5189930843914131713}
+      tag: Ham
+    wrongAnswers:
+    - Cheese
+    - Tomato
+    - Banana
+    - Candy
+    - Apple
+    - Orange
+    question:
+      question: What was inside the oven?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
 --- !u!1 &8557905439149199827
 GameObject:
   m_ObjectHideFlags: 0
