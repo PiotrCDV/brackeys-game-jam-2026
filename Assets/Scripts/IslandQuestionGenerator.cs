@@ -9,6 +9,8 @@
         public List<ObjectQuestionListElement> objectQuestionList;
 
         private InputSystem_Actions inputActions;
+        
+        private IslandQuestions.Question currentQuestion;
 
         private void Awake()
         {
@@ -20,20 +22,19 @@
             };
 
         }
+        
+        
+        
         private void OnEnable() => inputActions.Enable();
         private void OnDisable() => inputActions.Disable();
-        // private void Start()
-        // {
-        //     inputActions.Player.Debug.performed += OnDebug;
-        // }
-        //
-        // private void OnDisable()
-        // {
-        //     inputActions.Player.Debug.performed -= OnDebug;
-        //
-        // }
+       
+        
+        private void Start()
+        {
+            PrepareLevel();
+        }
 
-        private IslandQuestions.Question PrepareLevel()
+        private void PrepareLevel()
         {
             int questionIndex = Random.Range(0, objectQuestionList.Count);
             IslandQuestions.Question question = null;
@@ -59,33 +60,23 @@
                 Debug.LogError("Nie udało się wylosować pytania.");
             }
 
-            return question;
-            
+            currentQuestion = question;
+
         }
 
-        public IslandQuestions.Question GetRandomQuestion()
+        public IslandQuestions.Question GetQuestion()
         {
-            return PrepareLevel();
+            return currentQuestion;
         }
 
-
-        // // only for debug
-        // private void Update()
-        // {
-        //     if (debug && )
-        //     {
-        //         var question = GetRandomQuestion();
-        //         Debug.Log("Question: " + question.question + " Correct: " + question.correctAnswer +", wrong: A." + question.answer1 + " B." + question.answer2 + " C." + question.answer3);
-        //         
-        //     }
-        // }
+        
 
         private void OnDebug()
         {
             if (debug)
             {
-                var question = GetRandomQuestion();
-                Debug.Log("Question: " + question.question + " Correct: " + question.correctAnswer +", wrong: A." + question.answer1 + " B." + question.answer2 + " C." + question.answer3);
+                PrepareLevel();
+                Debug.Log("Question: " + currentQuestion.question + " Correct: " + currentQuestion.correctAnswer +", wrong: A." + currentQuestion.answer1 + " B." + currentQuestion.answer2 + " C." + currentQuestion.answer3);
             }
 
         }
