@@ -4709,53 +4709,136 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
   debug: 1
   objectQuestionList:
-  - GroupName: Prezenty
-    objects:
-    - gameObject: {fileID: 8507314983180973319}
-      tag: 
-    - gameObject: {fileID: 6686721352568940054}
-      tag: 
-    - gameObject: {fileID: 2167193095457474455}
-      tag: 
-    wrongAnswers: []
-    question:
-      question: How many christmas gifts were on the scene?
-      answer1: 
-      answer2: 
-      answer3: 
-      correctAnswer: 
-    minimumObjToEnable: 1
-    maximumObjToEnable: 3
-    isNumericAnswer: 1
-    minimumAnswer: 1
-    maximumAnswer: 10
-  - GroupName: Balwany
+  - GroupName: "Ba\u0142wany"
     objects:
     - gameObject: {fileID: 7978686862404581335}
       tag: Basketball
     - gameObject: {fileID: 3761283002878731275}
       tag: Beach ball
     - gameObject: {fileID: 3904284479719695207}
-      tag: Snow
+      tag: Snowball
+    - gameObject: {fileID: 5633345911996364145}
+      tag: Football
+    - gameObject: {fileID: 273468591496556745}
+      tag: Tomato
     wrongAnswers:
-    - gowno
-    - 21d
-    - AWD
-    - dWF
-    - WE
-    - DAWDQ2
-    - Q2D
+    - Bowling ball
+    - Orange
+    - Apple
+    - Pumpkin
+    - Coconut
+    - Balloon
+    - Pearl
+    - Light bulb
     question:
       question: What was the snowman head made of?
       answer1: 
       answer2: 
       answer3: 
       correctAnswer: 
+    skipRandomizing: 0
     minimumObjToEnable: 1
     maximumObjToEnable: 1
     isNumericAnswer: 0
     minimumAnswer: 0
     maximumAnswer: 0
+  - GroupName: Prezenty niebieskie
+    objects:
+    - gameObject: {fileID: 6124733820609401715}
+      tag: 
+    - gameObject: {fileID: 8507314983180973319}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many blue christmas gifts were there?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 1
+    maximumObjToEnable: 2
+    isNumericAnswer: 1
+    minimumAnswer: 1
+    maximumAnswer: 4
+  - GroupName: Prezenty czerwone
+    objects:
+    - gameObject: {fileID: 3320513004722024309}
+      tag: 
+    - gameObject: {fileID: 1261887028287061928}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many red christmas gifts were there?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 1
+    maximumObjToEnable: 2
+    isNumericAnswer: 1
+    minimumAnswer: 1
+    maximumAnswer: 4
+  - GroupName: "Prezenty bia\u0142e"
+    objects:
+    - gameObject: {fileID: 6686721352568940054}
+      tag: 
+    - gameObject: {fileID: 9214663889220256842}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many white christmas gifts were there?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 1
+    maximumObjToEnable: 2
+    isNumericAnswer: 1
+    minimumAnswer: 1
+    maximumAnswer: 4
+  - GroupName: Prezenty zielone
+    objects:
+    - gameObject: {fileID: 497763763454039826}
+      tag: 
+    - gameObject: {fileID: 6174553275606516564}
+      tag: 
+    - gameObject: {fileID: 3401120126046410974}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many green christmas gifts were there?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 1
+    maximumObjToEnable: 3
+    isNumericAnswer: 1
+    minimumAnswer: 1
+    maximumAnswer: 5
+  - GroupName: "Prezenty \u017C\xF3\u0142te"
+    objects:
+    - gameObject: {fileID: 7384178585979717291}
+      tag: 
+    - gameObject: {fileID: 2167193095457474455}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many yellow christmas gifts were there?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 1
+    maximumObjToEnable: 2
+    isNumericAnswer: 1
+    minimumAnswer: 1
+    maximumAnswer: 4
 --- !u!1 &5878900415077942015
 GameObject:
   m_ObjectHideFlags: 0
@@ -8926,6 +9009,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fc415ce3509b5b41ad403b1d53b363e, type: 3}
+--- !u!1 &497763763454039826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6fc415ce3509b5b41ad403b1d53b363e, type: 3}
+  m_PrefabInstance: {fileID: 732116760348617283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &982832750716063144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6fc415ce3509b5b41ad403b1d53b363e, type: 3}
@@ -11591,6 +11679,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b3dac3c6c7f8994ebab4e0e63a7755b, type: 3}
+--- !u!1 &1261887028287061928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b3dac3c6c7f8994ebab4e0e63a7755b, type: 3}
+  m_PrefabInstance: {fileID: 2108377596700132089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1930020303795741970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b3dac3c6c7f8994ebab4e0e63a7755b, type: 3}
@@ -12232,6 +12325,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 90533e77c74892044bce70551b08804a, type: 3}
   m_PrefabInstance: {fileID: 2510120371563811364}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3320513004722024309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 90533e77c74892044bce70551b08804a, type: 3}
+  m_PrefabInstance: {fileID: 2510120371563811364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2542415496743120393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12432,6 +12530,11 @@ PrefabInstance:
 --- !u!4 &2628101142321414756 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b7de84786d5c21b42beee5221c4055d5, type: 3}
+  m_PrefabInstance: {fileID: 2590235462507472271}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3401120126046410974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b7de84786d5c21b42beee5221c4055d5, type: 3}
   m_PrefabInstance: {fileID: 2590235462507472271}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2591623752383123620
@@ -18780,6 +18883,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ae699c777b85f341978bbbb845a3844, type: 3}
+--- !u!1 &6124733820609401715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6ae699c777b85f341978bbbb845a3844, type: 3}
+  m_PrefabInstance: {fileID: 6358525377365913122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6896344020714179017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6ae699c777b85f341978bbbb845a3844, type: 3}
@@ -19044,6 +19152,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7de84786d5c21b42beee5221c4055d5, type: 3}
+--- !u!1 &6174553275606516564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b7de84786d5c21b42beee5221c4055d5, type: 3}
+  m_PrefabInstance: {fileID: 6444935481838632453}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6844270569168312814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b7de84786d5c21b42beee5221c4055d5, type: 3}
@@ -21910,6 +22023,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b09f56cd283cf34881b4e7f08660977, type: 3}
+--- !u!1 &7384178585979717291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9b09f56cd283cf34881b4e7f08660977, type: 3}
+  m_PrefabInstance: {fileID: 7690097148680158202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7868368960661380113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9b09f56cd283cf34881b4e7f08660977, type: 3}
@@ -22615,6 +22733,11 @@ PrefabInstance:
 --- !u!4 &8406777193344507632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca1fc3c83da5d264381890eebac34f5b, type: 3}
+  m_PrefabInstance: {fileID: 8295742859317541147}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9214663889220256842 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca1fc3c83da5d264381890eebac34f5b, type: 3}
   m_PrefabInstance: {fileID: 8295742859317541147}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8304461403224287645

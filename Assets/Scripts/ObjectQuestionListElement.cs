@@ -15,7 +15,7 @@ namespace IslandQuestions
         [SerializeField] List<String> wrongAnswers = new List<String>();
         [SerializeField] private IslandQuestions.Question question;
 
-        [Header("Parametry")] 
+        [Header("Parametry")] [SerializeField] public bool skipRandomizing;
         [SerializeField] private int minimumObjToEnable;
         [SerializeField] private int maximumObjToEnable;
         
