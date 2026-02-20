@@ -32,7 +32,6 @@ namespace IslandQuestions
                     obj.gameObject.SetActive(false);
             }
         }
-        W
         public void EnableAllObjects()
         {
             foreach (var obj in objects)
