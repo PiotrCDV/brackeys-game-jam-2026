@@ -1254,6 +1254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4127632437499156677}
+  - component: {fileID: 6888212020126836924}
   m_Layer: 0
   m_Name: HallowenPrefab5
   m_TagString: Untagged
@@ -1282,6 +1283,68 @@ Transform:
   - {fileID: 6723150563626876088}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6888212020126836924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4186475000522049452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 1
+  objectQuestionList:
+  - GroupName: Tombstones
+    objects:
+    - gameObject: {fileID: 2040606985899930932}
+      tag: 
+    - gameObject: {fileID: 732401192045741271}
+      tag: 
+    - gameObject: {fileID: 3499019444470155409}
+      tag: 
+    - gameObject: {fileID: 9133380821597151989}
+      tag: 
+    - gameObject: {fileID: 3602658373655420517}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: 'How many tombstones were there? '
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 2
+    maximumObjToEnable: 5
+    isNumericAnswer: 1
+    minimumAnswer: 1
+    maximumAnswer: 7
+  - GroupName: Weapon
+    objects:
+    - gameObject: {fileID: 1638035637996400605}
+      tag: Axe
+    - gameObject: {fileID: 6025582323665966615}
+      tag: Hammer
+    - gameObject: {fileID: 1847504786964010451}
+      tag: Sword
+    wrongAnswers:
+    - Spear
+    - 'Crossbow '
+    - Halberd
+    - 'Mace '
+    question:
+      question: 'What weapon was sticking out of the ground? '
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
 --- !u!1 &4314637254215949819
 GameObject:
   m_ObjectHideFlags: 0

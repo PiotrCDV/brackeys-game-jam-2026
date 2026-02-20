@@ -1776,6 +1776,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3701525946673466886}
+  - component: {fileID: 6394521636318204481}
   m_Layer: 0
   m_Name: HallowenPrefab2
   m_TagString: Untagged
@@ -1804,6 +1805,69 @@ Transform:
   - {fileID: 1449926960821946099}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6394521636318204481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2944109038755078063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 1
+  objectQuestionList:
+  - GroupName: Candles
+    objects:
+    - gameObject: {fileID: 3590716663702620013}
+      tag: 
+    - gameObject: {fileID: 579112935189967031}
+      tag: 
+    - gameObject: {fileID: 1040772712544372162}
+      tag: 
+    - gameObject: {fileID: 1135972176076436137}
+      tag: 
+    - gameObject: {fileID: 7283525283284016371}
+      tag: 
+    - gameObject: {fileID: 8960383264782665027}
+      tag: 
+    - gameObject: {fileID: 2940442773758473215}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: 'How many candles were there? '
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 2
+    maximumObjToEnable: 7
+    isNumericAnswer: 1
+    minimumAnswer: 1
+    maximumAnswer: 9
+  - GroupName: Animal
+    objects:
+    - gameObject: {fileID: 8856782821321403187}
+      tag: Cat
+    wrongAnswers:
+    - Nothing
+    - Sword
+    - Candle
+    - Witch
+    - Skeleton
+    question:
+      question: 'What was on the roof of the crypt? '
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
 --- !u!1 &3117457557811103917
 GameObject:
   m_ObjectHideFlags: 0

@@ -263,6 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2292018308116445025}
+  - component: {fileID: 681148806979571645}
   m_Layer: 0
   m_Name: HallowenPrefab3
   m_TagString: Untagged
@@ -291,6 +292,64 @@ Transform:
   - {fileID: 4077591472909498284}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &681148806979571645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565586158973985840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 1
+  objectQuestionList:
+  - GroupName: Witch
+    objects:
+    - gameObject: {fileID: 5290861854195411757}
+      tag: Purple
+    wrongAnswers:
+    - Red
+    - Black
+    - Orange
+    - Blue
+    - Green
+    - Gray
+    question:
+      question: 'What color was the witch''s hat? '
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
+  - GroupName: Pumpkins
+    objects:
+    - gameObject: {fileID: 7337429948552272896}
+      tag: 
+    - gameObject: {fileID: 1989732896938960718}
+      tag: 
+    - gameObject: {fileID: 4335863615644676892}
+      tag: 
+    - gameObject: {fileID: 595727123080174693}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many Jack-o'-lanterns were there?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 4
+    isNumericAnswer: 1
+    minimumAnswer: 1
+    maximumAnswer: 6
 --- !u!1 &595727123080174693
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +380,8 @@ Transform:
   m_LocalPosition: {x: -4.112, y: 0.68871105, z: 0.45599985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2777835867142958557}
   m_Father: {fileID: 4077591472909498284}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5757646948170897801
@@ -775,12 +835,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484937373756101697}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -3.968, y: 1.169, z: 0.955}
+  m_LocalRotation: {x: 0.000000044985146, y: 0.60876167, z: 0.000000007943218, w: 0.79335326}
+  m_LocalPosition: {x: 0.009942889, y: 0.48028895, z: 0.5192671}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4077591472909498284}
+  m_Father: {fileID: 2096289550771790452}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!108 &2396812975763809734
 Light:
@@ -1179,7 +1239,8 @@ Transform:
   m_LocalPosition: {x: -5.28, y: 0.226, z: 4.131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 475907818752136971}
   m_Father: {fileID: 4077591472909498284}
   m_LocalEulerAnglesHint: {x: 0, y: 60, z: 0}
 --- !u!33 &3546100977327818674
@@ -1265,12 +1326,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2174805943036829964}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.8660254, z: -0, w: 0.50000006}
-  m_LocalPosition: {x: -5.1437707, y: 0.286, z: 4.2509565}
+  m_LocalRotation: {x: -0, y: 0.5, z: -0, w: 0.8660254}
+  m_LocalPosition: {x: -0.035770573, y: 0.060000017, z: 0.17795646}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4077591472909498284}
+  m_Father: {fileID: 5507123801152457464}
   m_LocalEulerAnglesHint: {x: 0, y: 120, z: 0}
 --- !u!108 &3422028249085148781
 Light:
@@ -2189,12 +2250,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3275614883852209772}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -5.077, y: 0.952, z: 1.89}
+  m_LocalRotation: {x: -0, y: 0.5, z: -0, w: 0.86602545}
+  m_LocalPosition: {x: 0.006248601, y: 0.086000025, z: 0.045176867}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4077591472909498284}
+  m_Father: {fileID: 108310288540701313}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!108 &2430637542844984450
 Light:
@@ -2504,7 +2565,8 @@ Transform:
   m_LocalPosition: {x: -5.5135407, y: 0.226, z: 5.162872}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 39959359671460995}
   m_Father: {fileID: 4077591472909498284}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!33 &1080120602965547879
@@ -3861,7 +3923,8 @@ Transform:
   m_LocalPosition: {x: -5.105, y: 0.866, z: 1.854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6939271312386482967}
   m_Father: {fileID: 4077591472909498284}
   m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
 --- !u!33 &5339030100605696905
@@ -3950,10 +4013,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 475907818752136971}
-  - {fileID: 39959359671460995}
-  - {fileID: 6939271312386482967}
-  - {fileID: 2777835867142958557}
   - {fileID: 108310288540701313}
   - {fileID: 5507123801152457464}
   - {fileID: 2859750442947718842}
@@ -4078,12 +4137,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7675693195440779360}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.79335344, z: -0, w: 0.6087613}
-  m_LocalPosition: {x: -5.413, y: 0.286, z: 5.314}
+  m_LocalRotation: {x: -0, y: 0.5, z: -0, w: 0.86602545}
+  m_LocalPosition: {x: -0.035770923, y: 0.060000017, z: 0.1779568}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4077591472909498284}
+  m_Father: {fileID: 2859750442947718842}
   m_LocalEulerAnglesHint: {x: 0, y: 105, z: 0}
 --- !u!108 &2898748946694061016
 Light:
