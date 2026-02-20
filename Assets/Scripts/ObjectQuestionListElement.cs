@@ -32,7 +32,6 @@ namespace IslandQuestions
                     obj.gameObject.SetActive(false);
             }
         }
-        
         public void EnableAllObjects()
         {
             foreach (var obj in objects)
@@ -89,7 +88,7 @@ namespace IslandQuestions
                 var set = new HashSet<String>();
                 foreach (var el in objects)
                 {
-                    if (el.gameObject.activeInHierarchy) // Bierzemy pod uwagę tylko włączone obiekty!
+                    if (el.gameObject.activeInHierarchy) // Bierzemy pod uwagę tylko włączone obiekty! pierdol się w dupę, niech to będzie ostatni raz kiedy o tym zapominam
                     {
                         set.Add(el.tag);
                     }
