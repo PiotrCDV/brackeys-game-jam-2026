@@ -1002,6 +1002,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1484145691399655192}
+  - component: {fileID: 3030521905153961388}
   m_Layer: 0
   m_Name: Lumbermill2
   m_TagString: Untagged
@@ -1031,6 +1032,93 @@ Transform:
   - {fileID: 8307042252340898421}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3030521905153961388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014138949690805581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 0
+  objectQuestionList:
+  - GroupName: Pallet
+    objects:
+    - gameObject: {fileID: 1707808755170098196}
+      tag: On stones
+    - gameObject: {fileID: 8385028100412807635}
+      tag: On planks
+    wrongAnswers:
+    - On a wall
+    - On a fence
+    - On a tree
+    - On metal pipes
+    - On a bucket
+    - On a wooden crate
+    question:
+      question: What was the pallet leaning on?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
+  - GroupName: Present
+    objects:
+    - gameObject: {fileID: 4721851276084677253}
+      tag: Next to the stones
+    - gameObject: {fileID: 8407495313148720429}
+      tag: In the bucket
+    wrongAnswers:
+    - Under the tree
+    - In the box
+    - Under the table
+    - On the pallet
+    - Inside the barrell
+    - 'On the planks '
+    question:
+      question: Where was the present?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
+  - GroupName: Banner
+    objects:
+    - gameObject: {fileID: 3127831768454719884}
+      tag: Saw and axe
+    wrongAnswers:
+    - Only axe
+    - Only saw
+    - Hammer and axe
+    - Shovel and saw
+    - Fishing rod and axe
+    - Fishing rod and saw
+    question:
+      question: What was on the baner?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
 --- !u!1 &4061479832100515128
 GameObject:
   m_ObjectHideFlags: 0

@@ -1461,7 +1461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2375794014632322223
 Transform:
   m_ObjectHideFlags: 0
@@ -1675,7 +1675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2455458772919617206
 Transform:
   m_ObjectHideFlags: 0
@@ -1689,6 +1689,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1906727237581320971}
   - {fileID: 7603356116566554807}
   m_Father: {fileID: 5993543490083810302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1926,6 +1927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5993543490083810302}
+  - component: {fileID: 1456393887285398162}
   m_Layer: 0
   m_Name: Lumbermill5
   m_TagString: Untagged
@@ -1947,7 +1949,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7248490642403117657}
-  - {fileID: 1906727237581320971}
   - {fileID: 3897811915106013220}
   - {fileID: 2375794014632322223}
   - {fileID: 2455458772919617206}
@@ -1956,6 +1957,86 @@ Transform:
   - {fileID: 3279584000041616125}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1456393887285398162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6648305928242164611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 0
+  objectQuestionList:
+  - GroupName: Saws
+    objects:
+    - gameObject: {fileID: 6684719717092814234}
+      tag: 
+    - gameObject: {fileID: 666886484940314788}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: 'How many saws were lying on the grass? '
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 0
+    maximumObjToEnable: 2
+    isNumericAnswer: 1
+    minimumAnswer: 0
+    maximumAnswer: 5
+  - GroupName: Lanterns
+    objects:
+    - gameObject: {fileID: 9188772810118699941}
+      tag: 
+    - gameObject: {fileID: 5175976052124525291}
+      tag: 
+    - gameObject: {fileID: 3912692737844688788}
+      tag: 
+    - gameObject: {fileID: 5566441482321466676}
+      tag: 
+    - gameObject: {fileID: 6711994595178605926}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many lanterns were there?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 0
+    maximumObjToEnable: 5
+    isNumericAnswer: 1
+    minimumAnswer: 0
+    maximumAnswer: 10
+  - GroupName: Axe
+    objects:
+    - gameObject: {fileID: 7528583632215406914}
+      tag: On wooden beams
+    wrongAnswers:
+    - On the ground
+    - On a table
+    - On a stack of logs
+    - On a barrel
+    - On stones
+    question:
+      question: What was the axe lying on?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    skipRandomizing: 0
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
 --- !u!1 &6684719717092814234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,11 +2064,11 @@ Transform:
   m_GameObject: {fileID: 6684719717092814234}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6885413, y: -0.1079438, z: -0.22973335, w: -0.6793244}
-  m_LocalPosition: {x: -1.0746613, y: 0.204, z: 3.5878227}
+  m_LocalPosition: {x: 0.7105484, y: 0.204, z: 8.49352}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5993543490083810302}
+  m_Father: {fileID: 2455458772919617206}
   m_LocalEulerAnglesHint: {x: 279.909, y: -80.461, z: 108.195}
 --- !u!33 &292439749240612929
 MeshFilter:
