@@ -75,6 +75,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6496351620598243584}
+  - component: {fileID: 1019300017105015381}
   m_Layer: 0
   m_Name: DungeonPrefab2
   m_TagString: Untagged
@@ -103,6 +104,63 @@ Transform:
   - {fileID: 7207918157755720555}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1019300017105015381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207354078564830400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
+  debug: 1
+  objectQuestionList:
+  - GroupName: Enemies
+    objects:
+    - gameObject: {fileID: 1919552077737895532}
+      tag: Archer
+    wrongAnswers:
+    - Wizard
+    - Berserker
+    - Mimic
+    - Spikes
+    - Trapdoor
+    question:
+      question: What enemy / trap  is not in the dungeon?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 1
+    isNumericAnswer: 0
+    minimumAnswer: 0
+    maximumAnswer: 0
+  - GroupName: Arrows in Mimic
+    objects:
+    - gameObject: {fileID: 4073508486795152997}
+      tag: 
+    - gameObject: {fileID: 8958044935834030906}
+      tag: 
+    - gameObject: {fileID: 6735262093463067360}
+      tag: 
+    - gameObject: {fileID: 9157379794269192512}
+      tag: 
+    wrongAnswers: []
+    question:
+      question: How many arrows does the mimic have stuck in him?
+      answer1: 
+      answer2: 
+      answer3: 
+      correctAnswer: 
+    minimumObjToEnable: 1
+    maximumObjToEnable: 4
+    isNumericAnswer: 1
+    minimumAnswer: 2
+    maximumAnswer: 6
 --- !u!1 &383026554280281110
 GameObject:
   m_ObjectHideFlags: 0
@@ -5576,6 +5634,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
   m_PrefabInstance: {fileID: 3767660980033286964}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4073508486795152997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
+  m_PrefabInstance: {fileID: 3767660980033286964}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3871908840851432488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6532,6 +6595,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
   m_PrefabInstance: {fileID: 5888769742638426033}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6735262093463067360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
+  m_PrefabInstance: {fileID: 5888769742638426033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5983946611158269890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7269,6 +7337,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
   m_PrefabInstance: {fileID: 8111044199527411307}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8958044935834030906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
+  m_PrefabInstance: {fileID: 8111044199527411307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8251107718598005515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7415,6 +7488,11 @@ PrefabInstance:
 --- !u!4 &8385241584038386682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
+  m_PrefabInstance: {fileID: 8346548580526095377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9157379794269192512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f01b18ca80438d3428d3551d1ea0f852, type: 3}
   m_PrefabInstance: {fileID: 8346548580526095377}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8549807420395672714
