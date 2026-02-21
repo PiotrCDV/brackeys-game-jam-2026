@@ -35,6 +35,7 @@ public class GameMenager : MonoBehaviour
     {
         SelectThemes();
         SpawnNewPoint();
+        SpawnNewPoint();
         islandMenager.RoundStart(); 
         difficultyLevel = 1;
         spawnDifficultyLevel = 0;
