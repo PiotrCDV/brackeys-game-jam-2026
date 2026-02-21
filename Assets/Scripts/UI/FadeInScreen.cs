@@ -26,6 +26,11 @@ public class FadeInScreen : MonoBehaviour
         {
             _animator.Play("fade_in");
         }
-    
     }
+
+    public void OnFullFadeEvent()
+    {
+        GameMenager.Instance.RestartGame();
+    }
+    
 }
