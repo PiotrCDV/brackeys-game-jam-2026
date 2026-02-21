@@ -27,7 +27,6 @@ public class GameMenager : MonoBehaviour
         IslandMenager.RoundStart(); 
         difficultyLevel = 1;
         spawnDifficultyLevel = 0;
-        quizMenager.StartQuiz();
     }
     public int GetDifficultyLevel()
     {

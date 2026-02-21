@@ -17,7 +17,6 @@ public class IslandMenager : MonoBehaviour
 
     private void Awake()
     {
-        spawnedIslands = new List<GameObject>();
     }
     public void RoundStart()
     {
