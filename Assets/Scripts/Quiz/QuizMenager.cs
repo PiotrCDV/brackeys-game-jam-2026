@@ -19,7 +19,7 @@ public class QuizMenager : MonoBehaviour
     [SerializeField]
     TMPro.TextMeshProUGUI answer4;
     string correctAnswer;
-    
+
     public GameObject questionCanvas;
     public CameraRotationController camera;
     public GameMenager gameMenager;
@@ -40,8 +40,8 @@ public class QuizMenager : MonoBehaviour
     {
         questionCanvas.SetActive(true);
         camera.LockCamera();
-        
-        
+
+
         GameObject selectedIsland = islandMenager.spawnedIslands[Random.Range(0, islandMenager.spawnedIslands.Count)];
         IslandQuestionGenerator islandQuestionGenerator = selectedIsland.GetComponent<IslandQuestionGenerator>();
         Question question = islandQuestionGenerator.GetQuestion();
@@ -59,28 +59,12 @@ public class QuizMenager : MonoBehaviour
 
         questionText.text = question.question;
         int answerIndex = GetRandomNumber(questions.Count);
-        if (correctAnswer == "YES")
+        if (correctAnswer == "YES" || correctAnswer == "NO")
         {
-            List<string> yesNoQuestions = new List<string>() { "YES", "NO", "YES", "NO" };
-            answer1.text = yesNoQuestions[answerIndex];
-            questions.RemoveAt(answerIndex);
-            answer2.text = yesNoQuestions[answerIndex = GetRandomNumber(questions.Count)];
-            questions.RemoveAt(answerIndex);
-            answer3.text = yesNoQuestions[answerIndex = GetRandomNumber(questions.Count)];
-            questions.RemoveAt(answerIndex);
-            answer4.text = yesNoQuestions[0];
-            return;
-        }
-        if (correctAnswer == "NO")
-        {
-            List<string> yesNoQuestions = new List<string>() { "YES", "NO", "YES", "NO" };
-            answer1.text = yesNoQuestions[answerIndex];
-            questions.RemoveAt(answerIndex);
-            answer2.text = yesNoQuestions[answerIndex = GetRandomNumber(questions.Count)];
-            questions.RemoveAt(answerIndex);
-            answer3.text = yesNoQuestions[answerIndex = GetRandomNumber(questions.Count)];
-            questions.RemoveAt(answerIndex);
-            answer4.text = yesNoQuestions[0];
+            answer1.text = "YES";
+            answer2.text = "NO";
+            answer3.text = "MAYBE";
+            answer4.text = "PROBABLY";
             return;
         }
 
@@ -110,7 +94,7 @@ public class QuizMenager : MonoBehaviour
         questionCanvas.SetActive(false);
         camera.UnlockCamera();
     }
-    public void  CheckAnswer(string answer)
+    public void CheckAnswer(string answer)
     {
         if (answer.ToUpper() == correctAnswer.ToUpper())
         {
@@ -131,5 +115,5 @@ public class QuizMenager : MonoBehaviour
     {
         return correctAnswer;
     }
-    
+
 }

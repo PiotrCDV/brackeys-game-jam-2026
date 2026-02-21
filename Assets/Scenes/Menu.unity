@@ -876,6 +876,67 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1001 &1824812875
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 935068605516043913, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
+      propertyPath: m_Name
+      value: LevelMusicSwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965801464192662533, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
+      propertyPath: levelAmbient
+      value: 
+      objectReference: {fileID: 8300000, guid: f60e0c115324b744390be589158d4001, type: 3}
+    - target: {fileID: 6628120728609874031, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -195.0141
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628120728609874031, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -193.80367
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628120728609874031, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -105.97117
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628120728609874031, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628120728609874031, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628120728609874031, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628120728609874031, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628120728609874031, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628120728609874031, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628120728609874031, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2fd9788ce05fa464a946c4b025e1b771, type: 3}
 --- !u!23 &12712777447366230
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2142,6 +2203,10 @@ PrefabInstance:
     - target: {fileID: 3274561914452698991, guid: 0c726fab015d33c4299543f2bcf2f879, type: 3}
       propertyPath: m_Name
       value: ' Menu'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540534115091045587, guid: 0c726fab015d33c4299543f2bcf2f879, type: 3}
+      propertyPath: m_text
+      value: Trouble in Cosmic Train
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32026,3 +32091,4 @@ SceneRoots:
   - {fileID: 8954676035333800017}
   - {fileID: 4099139491740119311}
   - {fileID: 893197038}
+  - {fileID: 1824812875}

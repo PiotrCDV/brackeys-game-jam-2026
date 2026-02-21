@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 
 public class GameMenager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class GameMenager : MonoBehaviour
     private Transform currentTunnelSpawnPoint;
     [SerializeField]
     private GameObject endTunnel;
+    [SerializeField]
+    private GameObject winCanvas;
 
     public static GameMenager Instance { get; private set; }
 
@@ -38,6 +41,7 @@ public class GameMenager : MonoBehaviour
         islandMenager.RoundStart(); 
         difficultyLevel = 1;
         spawnDifficultyLevel = 0;
+        
     }
     public int GetDifficultyLevel()
     {
@@ -51,14 +55,18 @@ public class GameMenager : MonoBehaviour
     public void IncreaseDifficultLevel()
     {
         difficultyLevel++;
-        if (difficultyLevel%2 != 0 )
+        if (difficultyLevel % 2 != 0)
         {
             spawnDifficultyLevel++;
-            SpawnNewPoint();
+            Invoke("SpawnNewPoint",3f);
         }
     }
-    public void RestartDifficultyLevel()
+    public void CheckDiffcultyLevel()
     {
+
+    }
+    public void RestartDifficultyLevel()
+    {   
         difficultyLevel = 1;
         spawnDifficultyLevel = 0;
     }
@@ -75,6 +83,12 @@ public class GameMenager : MonoBehaviour
     }
     public void RestartGame()
     {
+        if (difficultyLevel > 10)
+        {
+            winCanvas.SetActive(true);
+            winCanvas.GetComponent<Menu>().PlayWinSound();
+            return;
+        }
         islandMenager.RoundEnd();
         GameStart();
         quizMenager.EndQuiz();
@@ -83,10 +97,14 @@ public class GameMenager : MonoBehaviour
     {
         RestartDifficultyLevel();
         islandMenager.GameEnd();
-        SpawnNewPoint();
+        Invoke("SpawnNewPoint",3f);
     }
     private void SelectThemes()
     {
+        if (currentTheme != null)
+        {
+            Destroy(currentTheme);
+        }
         currentMapThemeIndex = Random.Range(0, mapThemes.Count);
         currentTheme = Instantiate(mapThemes[currentMapThemeIndex]);
         foreach (GameObject map in currentTheme.GetComponent<ThemMap>().themeMaps)
