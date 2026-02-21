@@ -50,3 +50,5 @@ MonoBehaviour:
   answer2: {fileID: 0}
   answer3: {fileID: 0}
   answer4: {fileID: 0}
+  winSound: {fileID: 8300000, guid: d5aeac72efe79fb49addb83431afefd8, type: 3}
+  failSound: {fileID: 8300000, guid: 7abf1a8800c62c04fb9465d2650bfd3f, type: 3}

@@ -20,6 +20,10 @@ public class QuizMenager : MonoBehaviour
     TMPro.TextMeshProUGUI answer4;
     string correctAnswer;
 
+    [Header("Audio Sounds")]
+    [SerializeField] private AudioClip winSound;
+    [SerializeField] private AudioClip failSound;
+
     void QuestionSelector()
     {
         GameObject selectedIsland = islandMenager.spawnedIslands[Random.Range(0, islandMenager.spawnedIslands.Count)];
@@ -69,10 +73,12 @@ public class QuizMenager : MonoBehaviour
         if (answer == correctAnswer)
         {
             Debug.Log("Correct!");
+            AudioManager.Instance.PlaySFX(winSound);
         }
         else
         {
             Debug.Log("Wrong!");
+            AudioManager.Instance.PlaySFX(failSound);
         }
 
         FadeInScreen.Instance.PlayFadeIn();
