@@ -13,7 +13,7 @@ public class IslandMenager : MonoBehaviour
     private List<GameObject> islandList;
     public List<GameObject> spawnedIslands;
     [SerializeField]
-    private List<Transform> spawnPoits;
+    public List<Transform> spawnPoits;
 
     private void Awake()
     {
