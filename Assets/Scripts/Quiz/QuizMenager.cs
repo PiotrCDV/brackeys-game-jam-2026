@@ -24,6 +24,14 @@ public class QuizMenager : MonoBehaviour
     [SerializeField] private AudioClip winSound;
     [SerializeField] private AudioClip failSound;
 
+    public static QuizMenager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
     void QuestionSelector()
     {
         GameObject selectedIsland = islandMenager.spawnedIslands[Random.Range(0, islandMenager.spawnedIslands.Count)];
