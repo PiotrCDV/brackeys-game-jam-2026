@@ -35,9 +35,11 @@ public class GameMenager : MonoBehaviour
     {
         SelectThemes();
         SpawnNewPoint();
+        SpawnNewPoint();
         islandMenager.RoundStart(); 
         difficultyLevel = 1;
         spawnDifficultyLevel = 0;
+        
     }
     public int GetDifficultyLevel()
     {
@@ -51,14 +53,17 @@ public class GameMenager : MonoBehaviour
     public void IncreaseDifficultLevel()
     {
         difficultyLevel++;
-        if (difficultyLevel%2 != 0 )
+    }
+    public void CheckDiffcultyLevel()
+    {
+        if (difficultyLevel % 2 != 0)
         {
             spawnDifficultyLevel++;
             SpawnNewPoint();
         }
     }
     public void RestartDifficultyLevel()
-    {
+    {   
         difficultyLevel = 1;
         spawnDifficultyLevel = 0;
     }
@@ -87,6 +92,10 @@ public class GameMenager : MonoBehaviour
     }
     private void SelectThemes()
     {
+        if (currentTheme != null)
+        {
+            Destroy(currentTheme);
+        }
         currentMapThemeIndex = Random.Range(0, mapThemes.Count);
         currentTheme = Instantiate(mapThemes[currentMapThemeIndex]);
         foreach (GameObject map in currentTheme.GetComponent<ThemMap>().themeMaps)
