@@ -17,6 +17,8 @@ public class IslandMenager : MonoBehaviour
     public List<Transform> spawnPoits;
     [SerializeField]
     private TrainPositonRestert trainPositonRestert;
+    [SerializeField]
+    private RandomMaterial randomMaterial;
 
     public static IslandMenager Instance { get; private set; }
 
@@ -34,6 +36,7 @@ public class IslandMenager : MonoBehaviour
             spawnedIslands.Add(islandSpawner.SpawnIsland(spawnPoint, islandToSpawn[islandIndex]));
             islandToSpawn.RemoveAt(islandIndex);
         }
+        randomMaterial.RandomizeMaterial();
     }
     public void RoundEnd()
     {
