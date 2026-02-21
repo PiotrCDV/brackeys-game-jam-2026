@@ -22,7 +22,8 @@ public class QuizMenager : MonoBehaviour
     
     public GameObject questionCanvas;
     public CameraRotationController camera;
-    
+    public GameMenager gameMenager;
+
 
     [Header("Audio Sounds")]
     [SerializeField] private AudioClip winSound;
@@ -34,7 +35,6 @@ public class QuizMenager : MonoBehaviour
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
     void QuestionSelector()
     {
@@ -83,17 +83,19 @@ public class QuizMenager : MonoBehaviour
         answer2.text = "";
         answer3.text = "";
         answer4.text = "";
+        questionCanvas.SetActive(false);
+        camera.UnlockCamera();
     }
     public void  CheckAnswer(string answer)
     {
         if (answer == correctAnswer)
         {
-            Debug.Log("Correct!");
+            gameMenager.IncreaseDifficultLevel();
             AudioManager.Instance.PlaySFX(winSound);
         }
         else
         {
-            Debug.Log("Wrong!");
+            gameMenager.EndGame();
             AudioManager.Instance.PlaySFX(failSound);
         }
 
