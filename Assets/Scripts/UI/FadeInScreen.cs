@@ -30,7 +30,7 @@ public class FadeInScreen : MonoBehaviour
 
     public void OnFullFadeEvent()
     {
-        GameMenager.Instance.CheckDiffcultyLevel();
+        //GameMenager.Instance.CheckDiffcultyLevel();
         GameMenager.Instance.RestartGame();
     }
 

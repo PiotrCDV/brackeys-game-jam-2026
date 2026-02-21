@@ -35,7 +35,6 @@ public class GameMenager : MonoBehaviour
     {
         SelectThemes();
         SpawnNewPoint();
-        SpawnNewPoint();
         islandMenager.RoundStart(); 
         difficultyLevel = 1;
         spawnDifficultyLevel = 0;
@@ -53,14 +52,15 @@ public class GameMenager : MonoBehaviour
     public void IncreaseDifficultLevel()
     {
         difficultyLevel++;
-    }
-    public void CheckDiffcultyLevel()
-    {
         if (difficultyLevel % 2 != 0)
         {
             spawnDifficultyLevel++;
-            SpawnNewPoint();
+            Invoke("SpawnNewPoint",3f);
         }
+    }
+    public void CheckDiffcultyLevel()
+    {
+
     }
     public void RestartDifficultyLevel()
     {   
@@ -88,7 +88,7 @@ public class GameMenager : MonoBehaviour
     {
         RestartDifficultyLevel();
         islandMenager.GameEnd();
-        SpawnNewPoint();
+        Invoke("SpawnNewPoint",3f);
     }
     private void SelectThemes()
     {
