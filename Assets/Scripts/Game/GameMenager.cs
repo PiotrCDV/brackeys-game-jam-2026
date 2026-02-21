@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameMenager : MonoBehaviour
 {
     [SerializeField] 
-    private IslandMenager IslandMenager;
+    private IslandMenager islandMenager;
     private int difficultyLevel;
     [SerializeField]
     private List<GameObject> spawnPoint;
@@ -23,7 +23,6 @@ public class GameMenager : MonoBehaviour
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
         difficultyLevel = 1;
 
     }
@@ -31,13 +30,18 @@ public class GameMenager : MonoBehaviour
     {
         SelectThemes();
         SpawnNewPoint();
-        IslandMenager.RoundStart(); 
+        islandMenager.RoundStart(); 
         difficultyLevel = 1;
         spawnDifficultyLevel = 0;
     }
     public int GetDifficultyLevel()
     {
         return difficultyLevel;
+    }
+    private void GameStart()
+    {
+        SelectThemes();
+        islandMenager.RoundStart();
     }
     public void IncreaseDifficultLevel()
     {
@@ -51,14 +55,28 @@ public class GameMenager : MonoBehaviour
     public void RestartDifficultyLevel()
     {
         difficultyLevel = 1;
+        spawnDifficultyLevel = 0;
     }
     private void SpawnNewPoint()
     {
-        IslandMenager.spawnPoits.Add(spawnPoint[spawnDifficultyLevel].transform);
+        if (spawnDifficultyLevel >= spawnPoint.Count)
+        {
+            Debug.LogWarning("Max");
+            return;
+        }
+        islandMenager.spawnPoits.Add(spawnPoint[spawnDifficultyLevel].transform);
     }
     public void RestartGame()
     {
-        Debug.Log("Restarting Game...");
+        islandMenager.RoundEnd();
+        GameStart();
+        quizMenager.EndQuiz();
+    }
+    public void EndGame()
+    {
+        RestartDifficultyLevel();
+        islandMenager.GameEnd();
+        SpawnNewPoint();
     }
     private void SelectThemes()
     {
@@ -66,7 +84,7 @@ public class GameMenager : MonoBehaviour
         currentTheme = Instantiate(mapThemes[currentMapThemeIndex]);
         foreach (GameObject map in currentTheme.GetComponent<ThemMap>().themeMaps)
         {
-            IslandMenager.islandList.Add(map);
+            islandMenager.islandList.Add(map);
         }
     }
 }

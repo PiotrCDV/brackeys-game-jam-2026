@@ -15,6 +15,8 @@ public class IslandMenager : MonoBehaviour
     public List<GameObject> spawnedIslands;
     [SerializeField]
     public List<Transform> spawnPoits;
+    [SerializeField]
+    private TrainPositonRestert trainPositonRestert;
 
     public static IslandMenager Instance { get; private set; }
 
@@ -22,7 +24,6 @@ public class IslandMenager : MonoBehaviour
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
     public void RoundStart()
     {
@@ -36,13 +37,13 @@ public class IslandMenager : MonoBehaviour
     }
     public void RoundEnd()
     {
+        trainPositonRestert.TrainReset();
         islandDestroyer.DestroyIsland(spawnedIslands);
         spawnedIslands.Clear();
         islandList.Clear();
     }
     public void GameEnd()
     {
-        RoundEnd();
         spawnPoits.Clear();
     }
 }
