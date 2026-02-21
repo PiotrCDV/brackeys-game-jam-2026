@@ -2356,6 +2356,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &283524812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 283524814}
+  - component: {fileID: 283524813}
+  m_Layer: 0
+  m_Name: GameMenager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &283524813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283524812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e67576d0f5dd4d4d8888dfefeeb9ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameMenager
+  IslandMenager: {fileID: 651358647}
+  spawnPoint:
+  - {fileID: 508105626}
+  - {fileID: 724267203}
+  quizMenager: {fileID: 112487304}
+--- !u!4 &283524814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283524812}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.23961, y: -0, z: 4.8389}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &296869983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3318,6 +3367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TestSpawn
   islandMenager: {fileID: 651358647}
   quizMenager: {fileID: 112487304}
+  gameMenager: {fileID: 0}
 --- !u!4 &676944344
 Transform:
   m_ObjectHideFlags: 0
@@ -6715,7 +6765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 984242975601521300, guid: 9e1fee4e5f3be44419a1ef55f8c9b780, type: 3}
       propertyPath: m_fontSize
-      value: 21.15
+      value: 39.7
       objectReference: {fileID: 0}
     - target: {fileID: 988467384897247022, guid: 9e1fee4e5f3be44419a1ef55f8c9b780, type: 3}
       propertyPath: m_Pivot.x
@@ -6899,7 +6949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7132699885216532227, guid: 9e1fee4e5f3be44419a1ef55f8c9b780, type: 3}
       propertyPath: m_fontSize
-      value: 25
+      value: 55.1
       objectReference: {fileID: 0}
     - target: {fileID: 7908060638898064559, guid: 9e1fee4e5f3be44419a1ef55f8c9b780, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8565,13 +8615,17 @@ PrefabInstance:
       value: IslandMenager
       objectReference: {fileID: 0}
     - target: {fileID: 3130783774418676111, guid: a17929bab03a9e44abb31e2005eea5ee, type: 3}
+      propertyPath: spawnPoits.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130783774418676111, guid: a17929bab03a9e44abb31e2005eea5ee, type: 3}
       propertyPath: 'spawnPoits.Array.data[0]'
       value: 
-      objectReference: {fileID: 724267204}
+      objectReference: {fileID: 0}
     - target: {fileID: 3130783774418676111, guid: a17929bab03a9e44abb31e2005eea5ee, type: 3}
       propertyPath: 'spawnPoits.Array.data[1]'
       value: 
-      objectReference: {fileID: 508105627}
+      objectReference: {fileID: 0}
     - target: {fileID: 5978721836221410543, guid: a17929bab03a9e44abb31e2005eea5ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.85896
@@ -8626,8 +8680,8 @@ SceneRoots:
   - {fileID: 1742225963}
   - {fileID: 1302161897}
   - {fileID: 9166391606950729813}
-  - {fileID: 724267204}
   - {fileID: 508105627}
+  - {fileID: 724267204}
   - {fileID: 676944344}
   - {fileID: 272630331}
   - {fileID: 1023971765}
@@ -8636,3 +8690,4 @@ SceneRoots:
   - {fileID: 1685598604}
   - {fileID: 3508631187228497381}
   - {fileID: 851582691}
+  - {fileID: 283524814}

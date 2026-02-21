@@ -50,4 +50,8 @@ public class GameMenager : MonoBehaviour
     {
         IslandMenager.spawnPoits.Add(spawnPoint[spawnDifficultyLevel].transform);
     }
+    public void RestartGame()
+    {
+        Debug.Log("Restarting Game...");
+    }
 }
