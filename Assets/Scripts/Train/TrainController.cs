@@ -20,7 +20,7 @@ public class TrainController : MonoBehaviour
     public Image brakeTimeBar;
 
     private bool isBrakeButtonPressed = false;
-    private bool hasReachedDestination = false;
+    public bool hasReachedDestination = false; // mati ty cwelu czemu nie zrobiles tego od razu publicznym polem, a nie property z prywatnym setterem?
 
     private InputSystem_Actions inputActions;
 
