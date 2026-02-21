@@ -18,6 +18,7 @@ public class QuizMenager : MonoBehaviour
     TMPro.TextMeshProUGUI answer3;
     [SerializeField]
     TMPro.TextMeshProUGUI answer4;
+    string correctAnswer;
 
     void QuestionSelector()
     {
@@ -33,17 +34,20 @@ public class QuizMenager : MonoBehaviour
     void DisplayQuestion(Question question)
     {
         List<string> questions = new List<string>() { question.correctAnswer, question.answer1, question.answer2, question.answer3 };
+        correctAnswer = question.correctAnswer;
+
         questionText.text = question.question;
-        int correctAnswerIndex = GetRandomNumber(questions.Count);
 
-        answer1.text = questions[correctAnswerIndex];
-        questions.RemoveAt(correctAnswerIndex);
+        int answerIndex = GetRandomNumber(questions.Count);
 
-        answer2.text = questions[correctAnswerIndex = GetRandomNumber(questions.Count)];
-        questions.RemoveAt(correctAnswerIndex);
+        answer1.text = questions[answerIndex];
+        questions.RemoveAt(answerIndex);
 
-        answer3.text = questions[correctAnswerIndex = GetRandomNumber(questions.Count)];
-        questions.RemoveAt(correctAnswerIndex);
+        answer2.text = questions[answerIndex = GetRandomNumber(questions.Count)];
+        questions.RemoveAt(answerIndex);
+
+        answer3.text = questions[answerIndex = GetRandomNumber(questions.Count)];
+        questions.RemoveAt(answerIndex);
 
         answer4.text = questions[0];
 
@@ -51,6 +55,25 @@ public class QuizMenager : MonoBehaviour
     public void StartQuiz()
     {
         QuestionSelector();
+    }
+    public void EndQuiz()
+    {
+        questionText.text = "";
+        answer1.text = "";
+        answer2.text = "";
+        answer3.text = "";
+        answer4.text = "";
+    }
+    public void  CheckAnswer(string answer)
+    {
+        if (answer == correctAnswer)
+        {
+            Debug.Log("Correct!");
+        }
+        else
+        {
+            Debug.Log("Wrong!");
+        }
     }
 
 }
