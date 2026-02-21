@@ -10,10 +10,7 @@ public class TrainCanvas : MonoBehaviour
 
     public void OnEnable()
     {
-        var level = 1; // TODO fetch from gamemanager
+        var level = GameMenager.Instance.GetDifficultyLevel();
         levelText.text = levelBaseText + level;
-        
-        
-        
     }
 }
