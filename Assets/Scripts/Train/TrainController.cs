@@ -99,6 +99,9 @@ public class TrainController : MonoBehaviour
         {
             hasReachedDestination = true;
             Debug.Log("Train arrived at point");
+            // GameMenager.Instance
+            
+            
         }
     }
 
