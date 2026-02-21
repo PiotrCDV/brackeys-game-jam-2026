@@ -16,6 +16,11 @@ public class GameMenager : MonoBehaviour
     private List<GameObject> mapThemes;
     private int currentMapThemeIndex;
     private GameObject currentTheme;
+    [SerializeField]
+    private List<Transform> tunnelSpawnPoint;
+    private Transform currentTunnelSpawnPoint;
+    [SerializeField]
+    private GameObject endTunnel;
 
     public static GameMenager Instance { get; private set; }
 
@@ -65,6 +70,8 @@ public class GameMenager : MonoBehaviour
             return;
         }
         islandMenager.spawnPoits.Add(spawnPoint[spawnDifficultyLevel].transform);
+        currentTunnelSpawnPoint = tunnelSpawnPoint[spawnDifficultyLevel];
+        SpawnTunnel();
     }
     public void RestartGame()
     {
@@ -86,5 +93,9 @@ public class GameMenager : MonoBehaviour
         {
             islandMenager.islandList.Add(map);
         }
+    }
+    private void SpawnTunnel()
+    {
+        endTunnel.transform.position = currentTunnelSpawnPoint.position;
     }
 }
