@@ -12,6 +12,10 @@ public class GameMenager : MonoBehaviour
     private int spawnDifficultyLevel;
     [SerializeField]
     private QuizMenager quizMenager;
+    [SerializeField]
+    private List<GameObject> mapThemes;
+    private int currentMapThemeIndex;
+    private GameObject currentTheme;
 
     public static GameMenager Instance { get; private set; }
 
@@ -20,9 +24,12 @@ public class GameMenager : MonoBehaviour
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        difficultyLevel = 1;
+
     }
     private void OnEnable()
     {
+        SelectThemes();
         SpawnNewPoint();
         IslandMenager.RoundStart(); 
         difficultyLevel = 1;
@@ -52,5 +59,14 @@ public class GameMenager : MonoBehaviour
     public void RestartGame()
     {
         Debug.Log("Restarting Game...");
+    }
+    private void SelectThemes()
+    {
+        currentMapThemeIndex = Random.Range(0, mapThemes.Count);
+        currentTheme = Instantiate(mapThemes[currentMapThemeIndex]);
+        foreach (GameObject map in currentTheme.GetComponent<ThemMap>().themeMaps)
+        {
+            IslandMenager.islandList.Add(map);
+        }
     }
 }

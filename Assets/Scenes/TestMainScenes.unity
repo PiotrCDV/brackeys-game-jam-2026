@@ -4811,6 +4811,12 @@ MonoBehaviour:
   - {fileID: 508105626}
   - {fileID: 724267203}
   quizMenager: {fileID: 112487304}
+  mapThemes:
+  - {fileID: 717757915111585042, guid: 1c92821b3d63b50478fe5fd98e42e8d2, type: 3}
+  - {fileID: 732525142360925384, guid: 3c99b593840ed384cb770abd28ceb85a, type: 3}
+  - {fileID: 7436983092377440754, guid: f44ea7d455f251748ab424ad95e951c4, type: 3}
+  - {fileID: 5140095847147221289, guid: f43957de10d4887488f4a733b7938e34, type: 3}
+  - {fileID: 3228013727827356456, guid: 2a6dc6e9b04a97745ac3dd490e4768ec, type: 3}
 --- !u!4 &283524814
 Transform:
   m_ObjectHideFlags: 0
@@ -8992,7 +8998,7 @@ Transform:
   m_GameObject: {fileID: 724267203}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: 0, z: 45}
+  m_LocalPosition: {x: 16.84, y: 0, z: 10.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

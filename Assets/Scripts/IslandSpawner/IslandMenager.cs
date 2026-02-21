@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class IslandMenager : MonoBehaviour
@@ -10,7 +11,7 @@ public class IslandMenager : MonoBehaviour
     [SerializeField]
     private IslandDestroyer islandDestroyer;
     [SerializeField]
-    private List<GameObject> islandList;
+    public List<GameObject> islandList;
     public List<GameObject> spawnedIslands;
     [SerializeField]
     public List<Transform> spawnPoits;
@@ -32,6 +33,11 @@ public class IslandMenager : MonoBehaviour
     {
         islandDestroyer.DestroyIsland(spawnedIslands);
         spawnedIslands.Clear();
-        //Rester spawn poits
+        islandList.Clear();
+    }
+    public void GameEnd()
+    {
+        RoundEnd();
+        spawnPoits.Clear();
     }
 }
