@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 
 public class GameMenager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class GameMenager : MonoBehaviour
     private Transform currentTunnelSpawnPoint;
     [SerializeField]
     private GameObject endTunnel;
+    [SerializeField]
+    private GameObject winCanvas;
 
     public static GameMenager Instance { get; private set; }
 
@@ -80,6 +83,12 @@ public class GameMenager : MonoBehaviour
     }
     public void RestartGame()
     {
+        if (difficultyLevel > 10)
+        {
+            winCanvas.SetActive(true);
+            winCanvas.GetComponent<Menu>().PlayWinSound();
+            return;
+        }
         islandMenager.RoundEnd();
         GameStart();
         quizMenager.EndQuiz();
