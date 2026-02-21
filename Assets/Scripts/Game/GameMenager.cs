@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 
 public class GameMenager : MonoBehaviour
@@ -5,7 +7,10 @@ public class GameMenager : MonoBehaviour
     [SerializeField] 
     private IslandMenager IslandMenager;
     private int difficultyLevel;
-    
+    [SerializeField]
+    private List<GameObject> spawnPoint;
+    private int spawnDifficultyLevel;
+
     public static GameMenager Instance { get; private set; }
 
     private void Awake()
@@ -16,8 +21,10 @@ public class GameMenager : MonoBehaviour
     }
     private void OnEnable()
     {
+        SpawnNewPoint();
         IslandMenager.RoundStart(); 
         difficultyLevel = 1;
+        spawnDifficultyLevel = 0;
     }
     public int GetDifficultyLevel()
     {
@@ -26,10 +33,18 @@ public class GameMenager : MonoBehaviour
     public void IncreaseDifficultLevel()
     {
         difficultyLevel++;
+        if (difficultyLevel%2 != 0 )
+        {
+            spawnDifficultyLevel++;
+            SpawnNewPoint();
+        }
     }
     public void RestartDifficultyLevel()
     {
         difficultyLevel = 1;
     }
-    //private void AddNewSpawnPoint()
+    private void SpawnNewPoint()
+    {
+        IslandMenager.spawnPoits.Add(spawnPoint[spawnDifficultyLevel].transform);
+    }
 }
