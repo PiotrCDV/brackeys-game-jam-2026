@@ -32,5 +32,6 @@ public class IslandMenager : MonoBehaviour
     {
         islandDestroyer.DestroyIsland(spawnedIslands);
         spawnedIslands.Clear();
+        //Rester spawn poits
     }
 }
