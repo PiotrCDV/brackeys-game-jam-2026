@@ -19,6 +19,10 @@ public class QuizMenager : MonoBehaviour
     [SerializeField]
     TMPro.TextMeshProUGUI answer4;
     string correctAnswer;
+    
+    public GameObject questionCanvas;
+    public CameraRotationController camera;
+    
 
     [Header("Audio Sounds")]
     [SerializeField] private AudioClip winSound;
@@ -34,6 +38,10 @@ public class QuizMenager : MonoBehaviour
     }
     void QuestionSelector()
     {
+        questionCanvas.SetActive(true);
+        camera.LockCamera();
+        
+        
         GameObject selectedIsland = islandMenager.spawnedIslands[Random.Range(0, islandMenager.spawnedIslands.Count)];
         IslandQuestionGenerator islandQuestionGenerator = selectedIsland.GetComponent<IslandQuestionGenerator>();
         Question question = islandQuestionGenerator.GetQuestion();
