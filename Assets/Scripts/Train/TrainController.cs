@@ -10,7 +10,8 @@ public class TrainController : MonoBehaviour
     public Transform targetPoint;
 
     [Header("Movement settings")]
-    public float speed = 5f;
+    public float baseSpeed = 1.3f;
+    public float speed = 1.3f;
 
     [Header("Brake settings")]
     public float maxBrakeTimeLimit = 3f;
@@ -22,6 +23,10 @@ public class TrainController : MonoBehaviour
     private bool isBrakeButtonPressed = false;
     public bool hasReachedDestination = false; // mati ty cwelu czemu nie zrobiles tego od razu publicznym polem, a nie property z prywatnym setterem?
 
+    private bool isSpeedButtonPressed = false;
+    
+    
+    
     private InputSystem_Actions inputActions;
 
     #endregion
@@ -41,6 +46,10 @@ public class TrainController : MonoBehaviour
         UpdateBrakeUI();
         inputActions.Player.Brake.started += OnBrakeStarted;
         inputActions.Player.Brake.canceled += OnBrakeCanceled;
+        
+        inputActions.Player.Speed.started += OnSpeedStarted;
+        inputActions.Player.Speed.canceled += OnSpeedCanceled;
+        
         inputActions.Player.Enable();
         hasReachedDestination = false;
     }
@@ -49,6 +58,10 @@ public class TrainController : MonoBehaviour
     {
         inputActions.Player.Brake.started -= OnBrakeStarted;
         inputActions.Player.Brake.canceled -= OnBrakeCanceled;
+        
+        inputActions.Player.Speed.started -= OnSpeedStarted;
+        inputActions.Player.Speed.canceled -= OnSpeedCanceled;
+        
         inputActions.Player.Disable();
     }
 
@@ -59,6 +72,8 @@ public class TrainController : MonoBehaviour
     {
         if (targetPoint == null || hasReachedDestination) return;
 
+        HandleSpeed();
+        
         if (CanBrake())
         {
             HandleBraking();
@@ -66,6 +81,18 @@ public class TrainController : MonoBehaviour
         else
         {
             HandleMovement();
+        }
+    }
+
+    private void HandleSpeed()
+    {
+        if (isSpeedButtonPressed)
+        {
+            speed = baseSpeed * 10f;
+        }
+        else
+        {
+            speed = baseSpeed;
         }
     }
 
@@ -112,6 +139,9 @@ public class TrainController : MonoBehaviour
             brakeTimeBar.fillAmount = currentBrakeTimeLeft / maxBrakeTimeLimit;
         }
     }
+    
+    private void OnSpeedStarted(InputAction.CallbackContext context) => isSpeedButtonPressed = true;
+    private void OnSpeedCanceled(InputAction.CallbackContext context) => isSpeedButtonPressed = false;
 
     #endregion
 }

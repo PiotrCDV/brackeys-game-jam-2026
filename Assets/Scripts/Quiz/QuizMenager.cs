@@ -126,4 +126,10 @@ public class QuizMenager : MonoBehaviour
         FadeInScreen.Instance.PlayFadeIn();
     }
 
+
+    public string GetCorrectAnswer()
+    {
+        return correctAnswer;
+    }
+    
 }
