@@ -10,6 +10,11 @@ public class TrainPositonRestert : MonoBehaviour
     }
     public void TrainReset()
     {
+        if (train == null)
+        {
+            Debug.LogError("Train is not assigned in TrainPositonRestert.");
+            return;
+        }
         train.SetActive(false);
         train.transform.position = gameObject.transform.position;
         train.SetActive(true);
