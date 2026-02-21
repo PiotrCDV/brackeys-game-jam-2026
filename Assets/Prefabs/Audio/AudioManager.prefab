@@ -49,7 +49,7 @@ MonoBehaviour:
   mainMixer: {fileID: 24100000, guid: 3211d4bb4f183ee479e3b19b5402d50b, type: 2}
   musicSource: {fileID: 8897261071281149767}
   sfxSource: {fileID: 1379277465750805029}
-  ambientClip: {fileID: 8300000, guid: 2e3620daf343c314fafd6825999f7e16, type: 3}
+  ambientClip: {fileID: 8300000, guid: f60e0c115324b744390be589158d4001, type: 3}
 --- !u!82 &8897261071281149767
 AudioSource:
   m_ObjectHideFlags: 0
