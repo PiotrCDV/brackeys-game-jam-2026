@@ -74,6 +74,8 @@ public class QuizMenager : MonoBehaviour
         {
             Debug.Log("Wrong!");
         }
+
+        FadeInScreen.Instance.PlayFadeIn();
     }
 
 }
