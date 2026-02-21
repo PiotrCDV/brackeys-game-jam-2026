@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a71c885c9c85314aa22af51353c0c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Menu
+  winSound: {fileID: 0}
 --- !u!1 &1238987427589378032
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,7 +973,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: YOU answered 8 times correctly
+  m_text: YOU answered 10 times correctly
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a736285fa410f174497629bf17d95b15, type: 2}
   m_sharedMaterial: {fileID: -2361426652200578235, guid: a736285fa410f174497629bf17d95b15, type: 2}

@@ -33,7 +33,7 @@ AudioMixerController:
   - guid: b2e593082974bf545b00c031439455c9
     name: MusicVol
   - guid: 4348f6b4952738f49a4d8d572133ff6d
-    name: MyExposedParam
+    name: SFXVol
   m_AudioMixerGroupViews:
   - guids:
     - de2356eebe9f9394aaf06dfd6dc179a6
@@ -87,8 +87,8 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 61ea3e977d792924c89b7ed3a3081139
   m_FloatValues:
-    4348f6b4952738f49a4d8d572133ff6d: -1.7612991
-    b2e593082974bf545b00c031439455c9: -9.332112
+    4348f6b4952738f49a4d8d572133ff6d: 0.13552582
+    b2e593082974bf545b00c031439455c9: 0.13552584
   m_TransitionOverrides: {}
 --- !u!243 &672958984419620661
 AudioMixerGroupController:

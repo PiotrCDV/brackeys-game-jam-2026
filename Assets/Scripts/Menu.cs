@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
     
     [Header("Audio")]
     [SerializeField] private AudioClip winSound;
+    [SerializeField] private AudioClip clickSound;
 
 
     public void PlayWinSound()
@@ -34,4 +35,8 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
     
+    public void ClickSound()
+    {
+        AudioManager.Instance.PlaySFX(clickSound);
+    }
 }
