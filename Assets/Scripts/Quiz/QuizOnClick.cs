@@ -8,8 +8,12 @@ public class QuizOnClick : MonoBehaviour
     [SerializeField]
     QuizMenager quizMenager;
 
+    public AnswerCanvas answerCanvas;
+    
+
     public void OnAnswerClick()
     {
         quizMenager.CheckAnswer(answer.text);
+        answerCanvas.OnAnswerClick();
     }
 }
