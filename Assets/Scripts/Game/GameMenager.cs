@@ -10,6 +10,8 @@ public class GameMenager : MonoBehaviour
     [SerializeField]
     private List<GameObject> spawnPoint;
     private int spawnDifficultyLevel;
+    [SerializeField]
+    private QuizMenager quizMenager;
 
     public static GameMenager Instance { get; private set; }
 
@@ -25,6 +27,7 @@ public class GameMenager : MonoBehaviour
         IslandMenager.RoundStart(); 
         difficultyLevel = 1;
         spawnDifficultyLevel = 0;
+        quizMenager.StartQuiz();
     }
     public int GetDifficultyLevel()
     {
