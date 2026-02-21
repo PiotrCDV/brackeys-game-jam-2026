@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HowToPlayCanvas : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class HowToPlayCanvas : MonoBehaviour
 
     public void NextOnClick()
     {
+        Debug.Log("NEXT");
         NextState();
         DisplayText();
     }
@@ -77,6 +79,8 @@ public class HowToPlayCanvas : MonoBehaviour
     private void DisableCanvas()
     {
         gameObject.SetActive(false);
+        SceneManager.LoadScene("TestMainScenes");
+        
     }
 
 
