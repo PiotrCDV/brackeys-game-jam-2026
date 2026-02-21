@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7436983092377440754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8001954303816827021}
+  - component: {fileID: -2483929549272837857}
+  m_Layer: 0
+  m_Name: LumberMill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8001954303816827021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436983092377440754}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2483929549272837857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436983092377440754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75baa287cdf98dd47b7ed54301d2c991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThemMap
+  themeMaps:
+  - {fileID: 345819319640792640, guid: 5ecce2ddfbe7537469a67aa38075e6b3, type: 3}
+  - {fileID: 4014138949690805581, guid: 1eeef0e95d5bb504cb52112d3728a6db, type: 3}
+  - {fileID: 7498826771884651688, guid: 9d7174dd7e46e26438ea53352cff2b9c, type: 3}
+  - {fileID: 4920390488652639372, guid: 44361759678478144bedeac0616841eb, type: 3}
+  - {fileID: 6648305928242164611, guid: 7c501504dfb52784ea2023fd40eef896, type: 3}
