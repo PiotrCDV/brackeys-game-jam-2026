@@ -22,7 +22,8 @@ public class QuizMenager : MonoBehaviour
     
     public GameObject questionCanvas;
     public CameraRotationController camera;
-    
+    public GameMenager gameMenager;
+
 
     [Header("Audio Sounds")]
     [SerializeField] private AudioClip winSound;
@@ -34,7 +35,6 @@ public class QuizMenager : MonoBehaviour
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
     void QuestionSelector()
     {
@@ -53,12 +53,36 @@ public class QuizMenager : MonoBehaviour
     }
     void DisplayQuestion(Question question)
     {
+
         List<string> questions = new List<string>() { question.correctAnswer, question.answer1, question.answer2, question.answer3 };
-        correctAnswer = question.correctAnswer;
+        correctAnswer = question.correctAnswer.ToUpper();
 
         questionText.text = question.question;
-
         int answerIndex = GetRandomNumber(questions.Count);
+        if (correctAnswer == "YES")
+        {
+            List<string> yesNoQuestions = new List<string>() { "YES", "NO", "YES", "NO" };
+            answer1.text = yesNoQuestions[answerIndex];
+            questions.RemoveAt(answerIndex);
+            answer2.text = yesNoQuestions[answerIndex = GetRandomNumber(questions.Count)];
+            questions.RemoveAt(answerIndex);
+            answer3.text = yesNoQuestions[answerIndex = GetRandomNumber(questions.Count)];
+            questions.RemoveAt(answerIndex);
+            answer4.text = yesNoQuestions[0];
+            return;
+        }
+        if (correctAnswer == "NO")
+        {
+            List<string> yesNoQuestions = new List<string>() { "YES", "NO", "YES", "NO" };
+            answer1.text = yesNoQuestions[answerIndex];
+            questions.RemoveAt(answerIndex);
+            answer2.text = yesNoQuestions[answerIndex = GetRandomNumber(questions.Count)];
+            questions.RemoveAt(answerIndex);
+            answer3.text = yesNoQuestions[answerIndex = GetRandomNumber(questions.Count)];
+            questions.RemoveAt(answerIndex);
+            answer4.text = yesNoQuestions[0];
+            return;
+        }
 
         answer1.text = questions[answerIndex];
         questions.RemoveAt(answerIndex);
@@ -83,17 +107,19 @@ public class QuizMenager : MonoBehaviour
         answer2.text = "";
         answer3.text = "";
         answer4.text = "";
+        questionCanvas.SetActive(false);
+        camera.UnlockCamera();
     }
     public void  CheckAnswer(string answer)
     {
-        if (answer == correctAnswer)
+        if (answer.ToUpper() == correctAnswer.ToUpper())
         {
-            Debug.Log("Correct!");
+            gameMenager.IncreaseDifficultLevel();
             AudioManager.Instance.PlaySFX(winSound);
         }
         else
         {
-            Debug.Log("Wrong!");
+            gameMenager.EndGame();
             AudioManager.Instance.PlaySFX(failSound);
         }
 

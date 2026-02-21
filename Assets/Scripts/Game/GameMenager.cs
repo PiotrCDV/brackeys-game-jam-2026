@@ -5,13 +5,22 @@ using UnityEngine;
 public class GameMenager : MonoBehaviour
 {
     [SerializeField] 
-    private IslandMenager IslandMenager;
+    private IslandMenager islandMenager;
     private int difficultyLevel;
     [SerializeField]
     private List<GameObject> spawnPoint;
     private int spawnDifficultyLevel;
     [SerializeField]
     private QuizMenager quizMenager;
+    [SerializeField]
+    private List<GameObject> mapThemes;
+    private int currentMapThemeIndex;
+    private GameObject currentTheme;
+    [SerializeField]
+    private List<Transform> tunnelSpawnPoint;
+    private Transform currentTunnelSpawnPoint;
+    [SerializeField]
+    private GameObject endTunnel;
 
     public static GameMenager Instance { get; private set; }
 
@@ -19,18 +28,25 @@ public class GameMenager : MonoBehaviour
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        difficultyLevel = 1;
+
     }
     private void OnEnable()
     {
+        SelectThemes();
         SpawnNewPoint();
-        IslandMenager.RoundStart(); 
+        islandMenager.RoundStart(); 
         difficultyLevel = 1;
         spawnDifficultyLevel = 0;
     }
     public int GetDifficultyLevel()
     {
         return difficultyLevel;
+    }
+    private void GameStart()
+    {
+        SelectThemes();
+        islandMenager.RoundStart();
     }
     public void IncreaseDifficultLevel()
     {
@@ -44,13 +60,42 @@ public class GameMenager : MonoBehaviour
     public void RestartDifficultyLevel()
     {
         difficultyLevel = 1;
+        spawnDifficultyLevel = 0;
     }
     private void SpawnNewPoint()
     {
-        IslandMenager.spawnPoits.Add(spawnPoint[spawnDifficultyLevel].transform);
+        if (spawnDifficultyLevel >= spawnPoint.Count)
+        {
+            Debug.LogWarning("Max");
+            return;
+        }
+        islandMenager.spawnPoits.Add(spawnPoint[spawnDifficultyLevel].transform);
+        currentTunnelSpawnPoint = tunnelSpawnPoint[spawnDifficultyLevel];
+        SpawnTunnel();
     }
     public void RestartGame()
     {
-        Debug.Log("Restarting Game...");
+        islandMenager.RoundEnd();
+        GameStart();
+        quizMenager.EndQuiz();
+    }
+    public void EndGame()
+    {
+        RestartDifficultyLevel();
+        islandMenager.GameEnd();
+        SpawnNewPoint();
+    }
+    private void SelectThemes()
+    {
+        currentMapThemeIndex = Random.Range(0, mapThemes.Count);
+        currentTheme = Instantiate(mapThemes[currentMapThemeIndex]);
+        foreach (GameObject map in currentTheme.GetComponent<ThemMap>().themeMaps)
+        {
+            islandMenager.islandList.Add(map);
+        }
+    }
+    private void SpawnTunnel()
+    {
+        endTunnel.transform.position = currentTunnelSpawnPoint.position;
     }
 }
