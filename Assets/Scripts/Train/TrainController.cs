@@ -33,17 +33,16 @@ public class TrainController : MonoBehaviour
         inputActions = new InputSystem_Actions();
     }
 
-    void Start()
-    {
-        currentBrakeTimeLeft = maxBrakeTimeLimit;
-        UpdateBrakeUI();
-    }
+
 
     void OnEnable()
     {
+        currentBrakeTimeLeft = maxBrakeTimeLimit;
+        UpdateBrakeUI();
         inputActions.Player.Brake.started += OnBrakeStarted;
         inputActions.Player.Brake.canceled += OnBrakeCanceled;
         inputActions.Player.Enable();
+        hasReachedDestination = false;
     }
 
     void OnDisable()
