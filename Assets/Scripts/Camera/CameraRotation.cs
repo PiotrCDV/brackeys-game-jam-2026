@@ -21,6 +21,8 @@ public class CameraRotationController : MonoBehaviour
     private float rotationX = 0f;
     private float rotationY = 0f;
 
+    private bool locked = false;
+
     private void Awake()
     {
         inputActions = new InputSystem_Actions();
@@ -40,13 +42,16 @@ public class CameraRotationController : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.visible = false;    
     }
 
     private void Update()
     {
-        HandleRotation();
-        HandleZoom();
+        if (!locked)
+        {
+            HandleRotation();
+            HandleZoom();
+        }
     }
 
     private void HandleRotation()
@@ -67,4 +72,23 @@ public class CameraRotationController : MonoBehaviour
         float targetFOV = isZooming ? zoomFOV : defaultFOV;
         cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, targetFOV, Time.deltaTime * zoomSpeed);
     }
+    
+    public void LockCamera()
+    {
+        Debug.Log("Locking camera");
+        locked = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    
+    public void UnlockCamera()
+    {
+        Debug.Log("Unlocking camera");
+        
+        locked = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        
+        Cursor.visible = false;
+    }
+    
 }
