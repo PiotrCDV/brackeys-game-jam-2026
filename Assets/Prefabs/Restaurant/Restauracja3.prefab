@@ -1942,7 +1942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75c40a845e476d4b9568efec0f376f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IslandQuestionGenerator
-  debug: 1
+  debug: 0
   objectQuestionList:
   - GroupName: Fride
     objects:
@@ -1967,6 +1967,7 @@ MonoBehaviour:
       answer2: 
       answer3: 
       correctAnswer: 
+    skipRandomizing: 0
     minimumObjToEnable: 1
     maximumObjToEnable: 1
     isNumericAnswer: 0
@@ -1991,6 +1992,7 @@ MonoBehaviour:
       answer2: 
       answer3: 
       correctAnswer: 
+    skipRandomizing: 0
     minimumObjToEnable: 1
     maximumObjToEnable: 1
     isNumericAnswer: 0

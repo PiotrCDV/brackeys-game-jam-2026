@@ -590,7 +590,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""bcbc0498-69bb-49b2-b347-44fee36efbb2"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""path"": ""<Pen>/tip"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
