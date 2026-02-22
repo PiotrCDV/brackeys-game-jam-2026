@@ -99,7 +99,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 2
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -499,7 +499,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: You can stop the train by holding Space button, but you have limited usage
-    of the brake. Remaining usage is displayed in bottom right corner.
+    of the brake. Remaining usage is displayed in bottom right corner. Press W to
+    speed up,
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a736285fa410f174497629bf17d95b15, type: 2}
   m_sharedMaterial: {fileID: -2361426652200578235, guid: a736285fa410f174497629bf17d95b15, type: 2}
@@ -526,11 +527,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65.85
+  m_fontSize: 59.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 2
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -1085,7 +1086,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 2
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1

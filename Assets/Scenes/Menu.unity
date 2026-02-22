@@ -2208,6 +2208,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Trouble in Cosmic Train
       objectReference: {fileID: 0}
+    - target: {fileID: 3540534115091045587, guid: 0c726fab015d33c4299543f2bcf2f879, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f6170701e2921964d974c8cd119bbf2a, type: 2}
+    - target: {fileID: 3540534115091045587, guid: 0c726fab015d33c4299543f2bcf2f879, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2361426652200578235, guid: f6170701e2921964d974c8cd119bbf2a, type: 2}
+    - target: {fileID: 3540534115091045587, guid: 0c726fab015d33c4299543f2bcf2f879, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

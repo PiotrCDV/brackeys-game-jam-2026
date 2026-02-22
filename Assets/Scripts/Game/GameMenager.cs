@@ -61,10 +61,6 @@ public class GameMenager : MonoBehaviour
             Invoke("SpawnNewPoint",3f);
         }
     }
-    public void CheckDiffcultyLevel()
-    {
-
-    }
     public void RestartDifficultyLevel()
     {   
         difficultyLevel = 1;
@@ -74,7 +70,6 @@ public class GameMenager : MonoBehaviour
     {
         if (spawnDifficultyLevel >= spawnPoint.Count)
         {
-            Debug.LogWarning("Max");
             return;
         }
         islandMenager.spawnPoits.Add(spawnPoint[spawnDifficultyLevel].transform);
