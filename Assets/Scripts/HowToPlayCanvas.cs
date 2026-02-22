@@ -20,7 +20,6 @@ public class HowToPlayCanvas : MonoBehaviour
 
     public void NextOnClick()
     {
-        Debug.Log("NEXT");
         NextState();
         DisplayText();
     }

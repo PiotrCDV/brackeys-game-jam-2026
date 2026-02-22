@@ -45,18 +45,26 @@ public class TrainController : MonoBehaviour
         UpdateBrakeUI();
         inputActions.Player.Brake.started += OnBrakeStarted;
         inputActions.Player.Brake.canceled += OnBrakeCanceled;
-        
+
         inputActions.Player.Speed.started += OnSpeedStarted;
         inputActions.Player.Speed.canceled += OnSpeedCanceled;
-        
+
         inputActions.Player.Enable();
         hasReachedDestination = false;
-        
+
         currentBrakeTimeLeft = maxBrakeTimeLimit;
 
-        var level = GameMenager.Instance.GetDifficultyLevel();
+        int level;
+        try
+        {
+            level = GameMenager.Instance.GetDifficultyLevel();
+        }
+        catch (System.NullReferenceException)
+        {
+            level = 1;
+        }
 
-        if (level == 1 | level == 2)
+        if (level == 1 | level == 2 )
         {
             currentBrakeTimeLeft = 20f;
             maxBrakeTimeLimit = 20f;
